@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>类和对象的基本数据结构 | 周小可</title>
+    <meta name="description" content="实践不仅是检验真理的标准，而且是唯一的标准。">
+    
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.4a9e7301.css" as="style"><link rel="preload" href="/blog/assets/js/app.a54d2909.js" as="script"><link rel="preload" href="/blog/assets/js/2.fd76eafa.js" as="script"><link rel="preload" href="/blog/assets/js/24.a433853c.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.15308436.js"><link rel="prefetch" href="/blog/assets/js/11.a771847c.js"><link rel="prefetch" href="/blog/assets/js/12.feaf4627.js"><link rel="prefetch" href="/blog/assets/js/13.e37a4c0b.js"><link rel="prefetch" href="/blog/assets/js/14.de6f1bc3.js"><link rel="prefetch" href="/blog/assets/js/15.4427f88c.js"><link rel="prefetch" href="/blog/assets/js/16.9d3218d0.js"><link rel="prefetch" href="/blog/assets/js/17.d9d07dad.js"><link rel="prefetch" href="/blog/assets/js/18.c4b7480b.js"><link rel="prefetch" href="/blog/assets/js/19.4f9f264a.js"><link rel="prefetch" href="/blog/assets/js/20.06a48f5c.js"><link rel="prefetch" href="/blog/assets/js/21.4257293a.js"><link rel="prefetch" href="/blog/assets/js/22.85e5ef53.js"><link rel="prefetch" href="/blog/assets/js/23.0dfc6d99.js"><link rel="prefetch" href="/blog/assets/js/25.97f2b81e.js"><link rel="prefetch" href="/blog/assets/js/26.532cd082.js"><link rel="prefetch" href="/blog/assets/js/27.96db6f2e.js"><link rel="prefetch" href="/blog/assets/js/28.a1f6a8bc.js"><link rel="prefetch" href="/blog/assets/js/29.b2c2bd91.js"><link rel="prefetch" href="/blog/assets/js/3.98209718.js"><link rel="prefetch" href="/blog/assets/js/30.4ab75552.js"><link rel="prefetch" href="/blog/assets/js/31.a263582b.js"><link rel="prefetch" href="/blog/assets/js/32.434785d8.js"><link rel="prefetch" href="/blog/assets/js/33.73f26596.js"><link rel="prefetch" href="/blog/assets/js/34.c4fb3767.js"><link rel="prefetch" href="/blog/assets/js/35.e8ff9422.js"><link rel="prefetch" href="/blog/assets/js/36.0252fde3.js"><link rel="prefetch" href="/blog/assets/js/37.1e89f062.js"><link rel="prefetch" href="/blog/assets/js/38.d84daf6a.js"><link rel="prefetch" href="/blog/assets/js/39.9bf7e592.js"><link rel="prefetch" href="/blog/assets/js/4.068bd1c5.js"><link rel="prefetch" href="/blog/assets/js/40.9d39ea55.js"><link rel="prefetch" href="/blog/assets/js/41.42a663a1.js"><link rel="prefetch" href="/blog/assets/js/42.3a751d2f.js"><link rel="prefetch" href="/blog/assets/js/43.3a335356.js"><link rel="prefetch" href="/blog/assets/js/44.7d01f77e.js"><link rel="prefetch" href="/blog/assets/js/45.94380ee0.js"><link rel="prefetch" href="/blog/assets/js/46.c3daaae4.js"><link rel="prefetch" href="/blog/assets/js/47.0ef93bcd.js"><link rel="prefetch" href="/blog/assets/js/48.5b1a24b8.js"><link rel="prefetch" href="/blog/assets/js/49.c39c7fef.js"><link rel="prefetch" href="/blog/assets/js/5.bb18b958.js"><link rel="prefetch" href="/blog/assets/js/50.43f38f52.js"><link rel="prefetch" href="/blog/assets/js/51.fb3a6504.js"><link rel="prefetch" href="/blog/assets/js/52.d09c3b70.js"><link rel="prefetch" href="/blog/assets/js/53.06f6490b.js"><link rel="prefetch" href="/blog/assets/js/54.437f5d1a.js"><link rel="prefetch" href="/blog/assets/js/55.eb0681e9.js"><link rel="prefetch" href="/blog/assets/js/56.089548ed.js"><link rel="prefetch" href="/blog/assets/js/57.d545c4fe.js"><link rel="prefetch" href="/blog/assets/js/58.70be975f.js"><link rel="prefetch" href="/blog/assets/js/59.eebe4e88.js"><link rel="prefetch" href="/blog/assets/js/6.4d3dd8e5.js"><link rel="prefetch" href="/blog/assets/js/60.91b3ed77.js"><link rel="prefetch" href="/blog/assets/js/61.71e6c721.js"><link rel="prefetch" href="/blog/assets/js/62.28e384bf.js"><link rel="prefetch" href="/blog/assets/js/63.6646438b.js"><link rel="prefetch" href="/blog/assets/js/64.302d43d4.js"><link rel="prefetch" href="/blog/assets/js/65.271d4d28.js"><link rel="prefetch" href="/blog/assets/js/66.90a8840e.js"><link rel="prefetch" href="/blog/assets/js/67.1ad437d0.js"><link rel="prefetch" href="/blog/assets/js/68.90855765.js"><link rel="prefetch" href="/blog/assets/js/69.f6f5adc6.js"><link rel="prefetch" href="/blog/assets/js/7.481a6611.js"><link rel="prefetch" href="/blog/assets/js/70.3853662a.js"><link rel="prefetch" href="/blog/assets/js/71.98d8eeee.js"><link rel="prefetch" href="/blog/assets/js/72.fff2c9b2.js"><link rel="prefetch" href="/blog/assets/js/73.3d888aa9.js"><link rel="prefetch" href="/blog/assets/js/74.f4c59cfe.js"><link rel="prefetch" href="/blog/assets/js/75.39a7ef7e.js"><link rel="prefetch" href="/blog/assets/js/76.9faa10ae.js"><link rel="prefetch" href="/blog/assets/js/77.ac1b1239.js"><link rel="prefetch" href="/blog/assets/js/78.614fab51.js"><link rel="prefetch" href="/blog/assets/js/79.91b89113.js"><link rel="prefetch" href="/blog/assets/js/8.a7cdda78.js"><link rel="prefetch" href="/blog/assets/js/80.aaa67e21.js"><link rel="prefetch" href="/blog/assets/js/81.1e302fb8.js"><link rel="prefetch" href="/blog/assets/js/82.fce58955.js"><link rel="prefetch" href="/blog/assets/js/83.36cc12dd.js"><link rel="prefetch" href="/blog/assets/js/84.512f6776.js"><link rel="prefetch" href="/blog/assets/js/85.b32496e1.js"><link rel="prefetch" href="/blog/assets/js/86.f741c1ec.js"><link rel="prefetch" href="/blog/assets/js/87.29d27f1f.js"><link rel="prefetch" href="/blog/assets/js/88.3b0964ad.js"><link rel="prefetch" href="/blog/assets/js/89.12851ce5.js"><link rel="prefetch" href="/blog/assets/js/9.48986d07.js"><link rel="prefetch" href="/blog/assets/js/90.2f222f77.js"><link rel="prefetch" href="/blog/assets/js/91.edf5550b.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.4a9e7301.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">周小可</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/gcd/" class="nav-link">GCD</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/locks/" class="nav-link">iOS中的锁</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/performance-optimization/" class="nav-link">性能优化</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/responder/" class="nav-link">事件响应</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/image_decode/" class="nav-link">图片编解码</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/nshashtable-nsmaptable/" class="nav-link">NSHashTable 和 NSMapTable</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/dttext/" class="nav-link">图文混排与 DTCoreText</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/mvvm/" class="nav-link">MVVM 实战</a></li><li class="dropdown-item"><!----> <a href="https://github.com/hnxczk/InfiniteTree" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  InfiniteTree
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/hnxczk/ScrollViewAutoAdjust" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ScrollViewAutoAdjust
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="/blog/articles/instruments/" class="nav-link">Instruments 分析</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/note/" class="nav-link">笔记</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/mdn/" class="nav-link">MDN 学习笔记</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/02/" class="nav-link">JavaScript 类型</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/03/" class="nav-link">JavaScript 对象和原型链</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/05/" class="nav-link">JavaScript 执行上下文和执行栈</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/06/" class="nav-link">JavaScript 作用域链与闭包</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/head-first-design-pattern/" class="nav-link">Head First 设计模式</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/Graphic-Design-Patterns/" class="nav-link">图说设计模式</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-algorithm/" class="nav-link">极客时间-算法</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/" class="nav-link">极客时间-重学前端</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/network-study/" class="nav-link">极客时间-网络</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">源码解析</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/sd/" class="nav-link">SDWebImage</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/runtime/index/" class="nav-link">Runtime</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">算法</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/hash-map/" class="nav-link">哈希表</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/search/" class="nav-link">查找</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/algorithm-interview/" class="nav-link">面试遇到的算法</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">网络</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/networking/" class="nav-link">哈希表</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/http-https/" class="nav-link">HTTP与HTTPS</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">工程化</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/ios-coding-style/" class="nav-link">iOS 代码规范</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/ios-code-review/" class="nav-link">iOS 代码审核</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/configura/" class="nav-link">多环境配置</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/ios-app-on-line/" class="nav-link">开发者账号相关</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/uml/" class="nav-link">UML类图</a></li></ul></div></div> <a href="https://github.com/hnxczk/hnxczk.github.io.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/gcd/" class="nav-link">GCD</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/locks/" class="nav-link">iOS中的锁</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/performance-optimization/" class="nav-link">性能优化</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/responder/" class="nav-link">事件响应</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/image_decode/" class="nav-link">图片编解码</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/nshashtable-nsmaptable/" class="nav-link">NSHashTable 和 NSMapTable</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/dttext/" class="nav-link">图文混排与 DTCoreText</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/mvvm/" class="nav-link">MVVM 实战</a></li><li class="dropdown-item"><!----> <a href="https://github.com/hnxczk/InfiniteTree" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  InfiniteTree
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/hnxczk/ScrollViewAutoAdjust" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ScrollViewAutoAdjust
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="/blog/articles/instruments/" class="nav-link">Instruments 分析</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/note/" class="nav-link">笔记</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/mdn/" class="nav-link">MDN 学习笔记</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/02/" class="nav-link">JavaScript 类型</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/03/" class="nav-link">JavaScript 对象和原型链</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/05/" class="nav-link">JavaScript 执行上下文和执行栈</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/06/" class="nav-link">JavaScript 作用域链与闭包</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/head-first-design-pattern/" class="nav-link">Head First 设计模式</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/Graphic-Design-Patterns/" class="nav-link">图说设计模式</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-algorithm/" class="nav-link">极客时间-算法</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/" class="nav-link">极客时间-重学前端</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/network-study/" class="nav-link">极客时间-网络</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">源码解析</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/sd/" class="nav-link">SDWebImage</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/runtime/index/" class="nav-link">Runtime</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">算法</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/hash-map/" class="nav-link">哈希表</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/search/" class="nav-link">查找</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/algorithm-interview/" class="nav-link">面试遇到的算法</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">网络</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/networking/" class="nav-link">哈希表</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/http-https/" class="nav-link">HTTP与HTTPS</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">工程化</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/ios-coding-style/" class="nav-link">iOS 代码规范</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/ios-code-review/" class="nav-link">iOS 代码审核</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/configura/" class="nav-link">多环境配置</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/ios-app-on-line/" class="nav-link">开发者账号相关</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/uml/" class="nav-link">UML类图</a></li></ul></div></div> <a href="https://github.com/hnxczk/hnxczk.github.io.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>类和对象的基本数据结构</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/articles/runtime/02.html#objc-class-和-objc-object" class="sidebar-link">objc_class 和 objc_object</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/articles/runtime/02.html#isa-和-meta-class" class="sidebar-link">isa 和 Meta Class</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/articles/runtime/02.html#isa-的实现" class="sidebar-link">isa 的实现</a></li><li class="sidebar-sub-header"><a href="/blog/articles/runtime/02.html#meta-class" class="sidebar-link">Meta Class</a></li></ul></li><li><a href="/blog/articles/runtime/02.html#cache-t" class="sidebar-link">cache_t</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/articles/runtime/02.html#class-data-bits-t-和-class-rw-t-data" class="sidebar-link">class_data_bits_t 和 class_rw_t *data()</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/articles/runtime/02.html#class-rw-t-和-class-ro-t" class="sidebar-link">class_rw_t 和 class_ro_t</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/articles/runtime/02.html#method" class="sidebar-link">Method</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/articles/runtime/02.html#sel" class="sidebar-link">SEL</a></li><li class="sidebar-sub-header"><a href="/blog/articles/runtime/02.html#const-char-types" class="sidebar-link">const char *types</a></li><li class="sidebar-sub-header"><a href="/blog/articles/runtime/02.html#imp" class="sidebar-link">IMP</a></li></ul></li><li><a href="/blog/articles/runtime/02.html#ivar" class="sidebar-link">Ivar</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/articles/runtime/02.html#objc-property-t" class="sidebar-link">objc_property_t</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/articles/runtime/02.html#protocol-t" class="sidebar-link">protocol_t</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/articles/runtime/02.html#category" class="sidebar-link">Category</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/articles/runtime/02.html#qa-一些问答" class="sidebar-link">QA 一些问答</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/articles/runtime/02.html#_1-分类和协议中能否添加属性和成员变量" class="sidebar-link">1. 分类和协议中能否添加属性和成员变量</a></li></ul></li><li><a href="/blog/articles/runtime/02.html#参考" class="sidebar-link">参考</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="类和对象的基本数据结构"><a href="#类和对象的基本数据结构" aria-hidden="true" class="header-anchor">#</a> 类和对象的基本数据结构</h1> <p>由于 OC 中 <code>NSObject</code> 是基类，我们可以从它的实现来看一下类和对象的数据结构是怎么实现的。</p> <p>我们可以在源码中找到 <code>NSObject.h</code> 和 <code>NSObject.mm</code> 这两个文件。<code>NSObject</code> 的定义如下。</p> <div class="language- extra-class"><pre class="language-text"><code>// NSObject.h line 53
+@interface NSObject &lt;NSObject&gt; {
+    Class isa  OBJC_ISA_AVAILABILITY;
+}
+</code></pre></div><p>我们可以看出它只有一个 <code>Class</code> 成员变量 <code>isa</code>。</p> <p>通过查看 <code>Class</code> 定义如下</p> <div class="language- extra-class"><pre class="language-text"><code>// Object.mm line 33
+typedef struct objc_class *Class;
+typedef struct objc_object *id;
+</code></pre></div><p>在这里我们看到了 <code>Class</code> 就是一个指向 <code>objc_class</code> 类型结构体的指针，同时我们经常用可以修饰任意 OC 对象的 <code>id</code> 是一个指向 <code>objc_object</code> 类型结构体的指针。</p> <p>因此 <code>objc_class</code> 和 <code>objc_object</code> 就是类和对象对应的数据结构。</p> <h2 id="objc-class-和-objc-object"><a href="#objc-class-和-objc-object" aria-hidden="true" class="header-anchor">#</a> <code>objc_class</code> 和 <code>objc_object</code></h2> <p>我们在网上看到最多的就是 <code>runtime.h</code> 中的定义。</p> <div class="language- extra-class"><pre class="language-text"><code>// runtime.h line 41
+#if !OBJC_TYPES_DEFINED
+// line 55
+struct objc_class {
+    Class _Nonnull isa  OBJC_ISA_AVAILABILITY;
+
+#if !__OBJC2__
+    Class _Nullable super_class                              OBJC2_UNAVAILABLE;
+    const char * _Nonnull name                               OBJC2_UNAVAILABLE;
+    long version                                             OBJC2_UNAVAILABLE;
+    long info                                                OBJC2_UNAVAILABLE;
+    long instance_size                                       OBJC2_UNAVAILABLE;
+    struct objc_ivar_list * _Nullable ivars                  OBJC2_UNAVAILABLE;
+    struct objc_method_list * _Nullable * _Nullable methodLists                    OBJC2_UNAVAILABLE;
+    struct objc_cache * _Nonnull cache                       OBJC2_UNAVAILABLE;
+    struct objc_protocol_list * _Nullable protocols          OBJC2_UNAVAILABLE;
+#endif
+
+} OBJC2_UNAVAILABLE;
+/* Use `Class` instead of `struct objc_class *` */
+
+#endif
+</code></pre></div><p>但是仔细看代码就会发现 <code>OBJC_TYPES_DEFINED</code> 这个宏，它定义在 <code>objc-private.h</code> 文件中</p> <div class="language- extra-class"><pre class="language-text"><code>// objc-private.h line 41
+#define OBJC_TYPES_DEFINED 1
+</code></pre></div><p>因此这个定义是早已过期的。我们接着找。</p> <p>会发现项目中存在 <code>objc-runtime-new.h</code> <code>objc-runtime-new.mm</code> 和 <code>objc-runtime-old.h</code> <code>objc-runtime-old.mm</code> 这些文件。结合上一节的 <code>runtime</code> 的介绍和代码注释我们可以看出来这些就是 Objective-C 以及 Objective-C 2.0 两种实现。</p> <div class="language- extra-class"><pre class="language-text"><code>// objc-runtime-old.h line 183
+struct objc_class : objc_object {
+    Class superclass;
+    const char *name;
+    uint32_t version;
+    uint32_t info;
+    uint32_t instance_size;
+    struct old_ivar_list *ivars;
+    struct old_method_list **methodLists;
+    Cache cache;
+    struct old_protocol_list *protocols;
+    // CLS_EXT only
+    const uint8_t *ivar_layout;
+    struct old_class_ext *ext;
+    ...
+    // 下面都是一些函数
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>// objc-runtime-new.h line 1111
+struct objc_class : objc_object {
+    // Class ISA;
+    Class superclass;
+    cache_t cache;             // formerly cache pointer and vtable
+    class_data_bits_t bits;    // class_rw_t * plus custom rr/alloc flags
+
+    class_rw_t *data() { 
+        return bits.data();
+    }
+    ...
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>// objc-private.h line 75
+struct objc_object {
+    isa_t isa;
+    ...
+}
+</code></pre></div><p>老版本的实现就没必要在仔细看了，但是有一点需要注意的就是 <code>ivars</code>（属性列表）、<code>methodLists</code>（方法列表）。</p> <div class="language- extra-class"><pre class="language-text"><code>struct old_ivar_list *ivars;
+struct old_method_list **methodLists;
+</code></pre></div><p><code>ivars</code> 是指向 <code>old_ivar_list</code> 的指针。
+<code>methodLists</code> 是指向 <code>old_method_list</code> 的指针。
+<code>*methodLists</code> 是指向指向方法列表的指针。
+因此可以通过修改 <code>*methodLists</code> 的值来改变方法列表。</p> <p>我们可以看出 <code>objc_class</code> 都继承自 <code>objc_object</code> 。这也说明了在 <strong>OC 中类也是对象</strong>。而且所有的对象（继承自 <code>NSObject</code>）都包含了一个类型为 <code>isa_t</code> 的 结构体。</p> <h2 id="isa-和-meta-class"><a href="#isa-和-meta-class" aria-hidden="true" class="header-anchor">#</a> <code>isa</code> 和 <code>Meta Class</code></h2> <h3 id="isa-的实现"><a href="#isa-的实现" aria-hidden="true" class="header-anchor">#</a> <code>isa</code> 的实现</h3> <p>在老版本中 <code>isa</code> 是一个当前对象指向当前对象对应的类的指针。<code>isa_t</code> 也实现了这个功能，而且添加了一些其他的信息。</p> <div class="language- extra-class"><pre class="language-text"><code>// objc-private.h line 61
+union isa_t {
+    isa_t() { }
+    isa_t(uintptr_t value) : bits(value) { }
+
+    Class cls;
+    uintptr_t bits;
+#if defined(ISA_BITFIELD)
+    struct {
+        ISA_BITFIELD;  // defined in isa.h
+    };
+#endif
+};
+
+// isa.h line 78
+#   define ISA_BITFIELD                                                        \
+      uintptr_t nonpointer        : 1;                                         \
+      uintptr_t has_assoc         : 1;                                         \
+      uintptr_t has_cxx_dtor      : 1;                                         \
+      uintptr_t shiftcls          : 44; /*MACH_VM_MAX_ADDRESS 0x7fffffe00000*/ \
+      uintptr_t magic             : 6;                                         \
+      uintptr_t weakly_referenced : 1;                                         \
+      uintptr_t deallocating      : 1;                                         \
+      uintptr_t has_sidetable_rc  : 1;                                         \
+      uintptr_t extra_rc          : 8
+</code></pre></div><p>通过代码你会发现这是一个相当复杂的结构体，具体为什么这样设计可以参考下面这段文字。</p> <blockquote><p>使用整个指针大小的内存来存储 isa 指针有些浪费，尤其在 64 位的 CPU 上。在 ARM64 运行的 iOS 只使用了 33 位作为指针(与结构体中的 33 位无关，Mac OS 上为 47 位)，而剩下的 31 位用于其它目的。类的指针也同样根据字节对齐了，每一个类指针的地址都能够被 8 整除，也就是使最后 3 bits 为 0，为 isa 留下 34 位用于性能的优化。</p></blockquote> <p>更多的内容可以看 draveness 大神的 <a href="https://github.com/draveness/analyze/blob/master/contents/objc/%E4%BB%8E%20NSObject%20%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E4%BA%86%E8%A7%A3%20isa.md" target="_blank" rel="noopener noreferrer">文章<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>。</p> <p>我们在这里就把 <code>isa</code> 简单的当做指针来进行分析。</p> <h3 id="meta-class"><a href="#meta-class" aria-hidden="true" class="header-anchor">#</a> <code>Meta Class</code></h3> <p>我们通过上面的 <code>objc_object</code> 的实现代码看出来，OC 中对象并没有存储方法。（这其实很好理解，如果每个对象都存储着自己能执行的方法，那么同一个类的多个对象的方法就会重复存在，这样无疑会造成冗余的空间占用）。</p> <p>当一个对象的实例方法调用的时候，会通过 <code>isa</code> 查找它对应的类，然后在该类的 <code>class_data_bits_t</code> 中查找方法（具体查找过程后面会有）。当该类中无法找到方法的时候会通过 <code>super_class</code> 这个指针去父类中查找。</p> <p>对于类来说我们通过上面的源码知道了它也是一种对象，可以称之为类对象。那类对象的方法就要去它对应的类中查找，这个类就称之为元类（<code>Meta Class</code>）。</p> <p>下面这个图片中大家可以很清晰的看到 <em>对象</em>、<em>类</em>、<em>元类</em> 之间的关系。</p> <p><img src="/blog/assets/img/23.767219b6.png" alt=""></p> <p>上图中的关系已经很清晰了，有几个需要注意的点。</p> <ul><li>所有 <code>meta class</code> 的 <code>isa</code> 指向 <code>Root class</code>(也就是<code>NSObject</code>) 的 <code>meta class</code>。包括 <code>NSObject</code> 的 <code>meta class</code>。</li> <li><code>NSObject</code> 的 <code>meta class</code> 的 <code>super_class</code> 是 <code>NSObject</code> 的类。</li></ul> <p>更多信息可以查看 <a href="http://www.cocoawithlove.com/2010/01/what-is-meta-class-in-objective-c.html" target="_blank" rel="noopener noreferrer"> What is a meta-class in Objective-C?<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p>这里岔开一个话题，就是 <code>isa</code> 怎么读。个人认为应读作 <code>is a</code>，而不是 <code>isa</code> 连起来读。这样的话上图中就可以这样理解：<code>NSObject</code> 对象 <code>is a</code> <code>NSObject Class</code> 对象, <code>NSObject Class</code> <code>is a</code> <code>NSObject Meta Class</code> 对象。</p> <p>这里可以通过网上一个很有名的面试题来加深一下印象。</p> <div class="language- extra-class"><pre class="language-text"><code>@interface Sark : NSObject
+@end
+@implementation Sark
+@end
+int main(int argc, const char * argv[]) {
+     @autoreleasepool {
+          BOOL res1 = [(id)[NSObject class] isKindOfClass:[NSObject class]];
+          BOOL res2 = [(id)[NSObject class] isMemberOfClass:[NSObject class]];
+          BOOL res3 = [(id)[Sark class] isKindOfClass:[Sark class]];
+          BOOL res4 = [(id)[Sark class] isMemberOfClass:[Sark class]];
+          NSLog(@&quot;%d %d %d %d&quot;, res1, res2, res3, res4);
+     }
+     return 0;
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>2019-03-01 09:57:16.064211+0800 test[1647:105298] 1 0 0 0
+</code></pre></div><p>我们可以先看一下 <code>isKindOfClass</code> 和 <code>isMemberOfClass</code> 的实现。</p> <div class="language- extra-class"><pre class="language-text"><code>// NSObject.mm line 2000
++ (BOOL)isMemberOfClass:(Class)cls {
+    return object_getClass((id)self) == cls;
+}
+
+- (BOOL)isMemberOfClass:(Class)cls {
+    return [self class] == cls;
+}
+
++ (BOOL)isKindOfClass:(Class)cls {
+    for (Class tcls = object_getClass((id)self); tcls; tcls = tcls-&gt;superclass) {
+        if (tcls == cls) return YES;
+    }
+    return NO;
+}
+
+- (BOOL)isKindOfClass:(Class)cls {
+    for (Class tcls = [self class]; tcls; tcls = tcls-&gt;superclass) {
+        if (tcls == cls) return YES;
+    }
+    return NO;
+}
+</code></pre></div><p>我们逐个分析一下</p> <h4 id="res1"><a href="#res1" aria-hidden="true" class="header-anchor">#</a> res1</h4> <ul><li><code>[NSObject class]</code> 是一个类，因此会来到 <code>+ (BOOL)isKindOfClass:(Class)cls</code> 方法。此时 <code>self</code> -&gt; <code>NSObject class</code>，<code>cls</code> -&gt; <code>NSObject class</code>。</li> <li>进入循环，<code>tcls</code> -&gt; <code>NSObject meta class</code>。</li> <li><code>tcls != cls</code>，继续进入下一个循环，此时 <code>tcls</code> -&gt; <code>NSObject class</code>。</li> <li><code>tcls == cls</code>，返回 <code>YES</code>。</li></ul> <h4 id="res2"><a href="#res2" aria-hidden="true" class="header-anchor">#</a> res2</h4> <ul><li><code>[NSObject class]</code> 是一个类，因此会来到 <code>+ (BOOL)isMemberOfClass:(Class)cls</code> 方法。此时 <code>self</code> -&gt; <code>NSObject class</code>，<code>cls</code> -&gt; <code>NSObject class</code>。</li> <li><code>object_getClass((id)self)</code> 就是获取 <code>self</code> 的 <code>isa</code> 指针，因此这个获取的就是 <code>NSObject meta class</code>。</li> <li>显然它与 <code>cls</code> -&gt; <code>NSObject class</code> 不相等，返回 <code>NO</code>。</li></ul> <h4 id="res3"><a href="#res3" aria-hidden="true" class="header-anchor">#</a> res3</h4> <ul><li>与 <code>res1</code> 相同的，会来到<code>+ (BOOL)isKindOfClass:(Class)cls</code> 方法。此时 <code>self</code> -&gt; <code>Sark class</code>，<code>cls</code> -&gt; <code>Sark class</code>。</li> <li>进入循环，<code>tcls</code> -&gt; <code>Sark meta class</code>。</li> <li><code>tcls != cls</code>，继续进入下一个循环，此时 <code>tcls</code> -&gt; <code>NSObject meta class</code>。</li> <li>依然是 <code>tcls != cls</code>，继续进入下一个循环，<code>tcls</code> -&gt; <code>NSObject class</code>。</li> <li>依然是 <code>tcls != cls</code>，继续进入下一个循环，<code>tcls</code> -&gt; <code>nil</code>。</li> <li>退出循环。返回 <code>NO</code>。</li></ul> <h4 id="res4"><a href="#res4" aria-hidden="true" class="header-anchor">#</a> res4</h4> <ul><li>与 <code>res2</code> 相同，因此会来到 <code>+ (BOOL)isMemberOfClass:(Class)cls</code> 方法。此时 <code>self</code> -&gt; <code>Sark class</code>，<code>cls</code> -&gt; <code>Sark class</code>。</li> <li><code>object_getClass((id)self)</code> 就是获取 <code>self</code> 的 <code>isa</code> 指针，因此这个获取的就是 <code>Sark meta class</code>。</li> <li>显然它与 <code>cls</code> -&gt; <code>Sark class</code> 不相等，返回 <code>NO</code>。</li></ul> <p>通过这个例子相信你对于 <code>Meta Class</code> 有了更深的印象。总之诀窍就是<strong>按图索骥</strong>。</p> <h2 id="cache-t"><a href="#cache-t" aria-hidden="true" class="header-anchor">#</a> <code>cache_t</code></h2> <p>下面是 <code>cache_t</code> 的定义简化后的代码</p> <div class="language- extra-class"><pre class="language-text"><code>// objc-runtime-new.h line 59
+struct cache_t {
+    struct bucket_t *_buckets;
+    mask_t _mask;
+    mask_t _occupied;
+}
+
+// objc-runtime-new.h line 37
+struct bucket_t {
+    cache_key_t _key;
+    MethodCacheIMP _imp; // using MethodCacheIMP = IMP;
+}
+
+// objc-runtime-new.h line 28
+typedef uint32_t mask_t; // unsigned int
+
+// objc-runtime-new.h line 32
+typedef uintptr_t cache_key_t; // unsigned long
+</code></pre></div><p>通过源码(objc-cache.mm line 243-637)可以看出</p> <ul><li><code>cache_t</code>： 其实是一个散列表，以 <code>SEL</code> 为 <code>key</code> 储存 <code>SEL+IMP</code>。</li> <li><code>_buckets</code>： 是一个数组，它里面放的是 <code>bucket_t</code>。会随着加入数据的增多而进行扩容。</li> <li><code>_mask</code>： 已经分配内存空间 <code>_buckets</code> 的总数减一。用于 hash 计算。</li> <li><code>_occupied</code>： 表示是已经缓存的 <code>buckets</code> 数量。</li></ul> <p>下面我们来看一下两个关键函数。</p> <div class="language- extra-class"><pre class="language-text"><code>// objc-cache.mm line 524 
+// 根据 key 查找对应的 bucket_t
+bucket_t * cache_t::find(cache_key_t k, id receiver)
+{
+    assert(k != 0);
+
+    // 找到 _buckets
+    bucket_t *b = buckets();
+    // 找到 _mask
+    mask_t m = mask();
+
+    // 获取 k 对应的 hash 值
+    mask_t begin = cache_hash(k, m);
+    // 下面是通过线性探测的方法来查找,所以该方法会返回找到的 key 对应的 bucket_t，找不到就返回数组中最后为空的那个位置。
+    mask_t i = begin;
+    do {
+        if (b[i].key() == 0  ||  b[i].key() == k) {
+            return &amp;b[i];
+        }
+    } while ((i = cache_next(i, m)) != begin);
+
+    // 报错
+    // hack
+    Class cls = (Class)((uintptr_t)this - offsetof(objc_class, cache));
+    cache_t::bad_cache(receiver, (SEL)k, cls);
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>// objc-cache.mm line 561 
+// 这是存数据的方法，需要传入 cls 类、sel 方法名、imp 方法实现、receiver 方法接收者
+static void cache_fill_nolock(Class cls, SEL sel, IMP imp, id receiver)
+{
+    cacheUpdateLock.assertLocked();
+
+    // Never cache before +initialize is done
+    if (!cls-&gt;isInitialized()) return;
+
+    // 先看一下是否已经存在缓存
+    // Make sure the entry wasn't added to the cache by some other thread 
+    // before we grabbed the cacheUpdateLock.
+    if (cache_getImp(cls, sel)) return;
+
+    cache_t *cache = getCache(cls);
+    cache_key_t key = getKey(sel);
+
+    // hash 表的装载因子小于 3/4 的时候存入，否则进行扩容
+    // Use the cache as-is if it is less than 3/4 full
+    mask_t newOccupied = cache-&gt;occupied() + 1;
+    mask_t capacity = cache-&gt;capacity();
+    if (cache-&gt;isConstantEmptyCache()) {
+        // Cache is read-only. Replace it.
+        cache-&gt;reallocate(capacity, capacity ?: INIT_CACHE_SIZE);
+    }
+    else if (newOccupied &lt;= capacity / 4 * 3) {
+        // Cache is less than 3/4 full. Use it as-is.
+    }
+    else {
+        // Cache is too full. Expand it.
+        cache-&gt;expand();
+    }
+
+    // 来到这里能保证装载因子小于 3/4.
+    // Scan for the first unused slot and insert there.
+    // There is guaranteed to be an empty slot because the 
+    // minimum size is 4 and we resized at 3/4 full.
+    bucket_t *bucket = cache-&gt;find(key, receiver);
+    // 根据上面 find 函数的分析可以看出这个 bucket 里的内容是可能为空的。这就是找不到当前 key 对应的值，这种情况下返回一个空白的 bucket，因此这时候需要添加 _occupied 数量，然后将其存入散列表中
+    if (bucket-&gt;key() == 0) cache-&gt;incrementOccupied();
+    bucket-&gt;set(key, imp);
+}
+</code></pre></div><p>上面分析了 <code>cache_t</code> 的实现，其实 <code>cache</code> 的作用就是缓存调用过的方法，这样以来查找方法的时候先去 <code>cache</code> 中查找，找不到了再去方法列表找，这样就提高查找方法的效率。</p> <h2 id="class-data-bits-t-和-class-rw-t-data"><a href="#class-data-bits-t-和-class-rw-t-data" aria-hidden="true" class="header-anchor">#</a> <code>class_data_bits_t</code> 和 <code>class_rw_t *data()</code></h2> <p>通过对比新旧两版的 <code>objc_class</code> 的实现，可以看出来 <code>isa</code>、<code>superclass</code>、<code>cache</code> 这些基本是相同的。但是旧版本中的 <code>ivars</code>、<code>methodLists</code> 都找不到了，那我们猜测可以通过 <code>class_data_bits_t</code> 和 <code>class_rw_t *data()</code> 函数找到他们。</p> <div class="language- extra-class"><pre class="language-text"><code>// objc-runtime-new.h line 869
+struct class_data_bits_t {
+    // Values are the FAST_ flags above.
+    uintptr_t bits;
+
+    // line 922
+    class_rw_t* data() {
+        return (class_rw_t *)(bits &amp; FAST_DATA_MASK);
+    }
+}
+</code></pre></div><p>可以看出 <code>class_data_bits_t</code> 结构体中只包含一个 <code>unsigned long</code> 类型的 <code>bits</code>。它占有 64 位空间。将 <code>bits</code> 与 <code>FAST_DATA_MASK</code> 做按位与运算后，转化为 <code>class_rw_t *</code> 返回。</p> <p><code>FAST_DATA_MASK</code> 是个 16 进制的数，转化为二进制就是<code>11111111111111111111111111111111111111111111000</code> 长度为 47 位。因此返回的信息就是 [3 47]之间的数据。</p> <blockquote><p>在 x86_64 架构上，Mac OS 只使用了其中的 47 位来为对象分配地址。而且由于地址要按字节在内存中按字节对齐，所以掩码的后三位都是 0。
+因为 class_rw_t * 指针只存于第 [3, 47] 位，所以可以使用最后三位来存储关于当前类的其他信息</p></blockquote> <table><thead><tr><th>63-47</th> <th>46-3</th> <th>2</th> <th>1</th> <th>0</th></tr></thead> <tbody><tr><td>空闲</td> <td>class_rw_t data</td> <td>hasDefaultRR</td> <td>isSwiftStable</td> <td>isSwiftLegacy</td></tr></tbody></table> <p>我们看一下 <code>FAST_DATA_MASK</code> 的定义。</p> <p>(在查找 <code>FAST_DATA_MASK</code> 定义的时候，你会发现它的周围有很多类似的定义，根据宏 <code>__LP64__</code> 来判断到底编译哪个。关于 <code>__LP64__</code> 的更多信息可以看<a href="https://stackoverflow.com/questions/6721037/where-is-lp64-defined-for-default-builds-of-c-applications-on-osx-10-6" target="_blank" rel="noopener noreferrer">这里<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>。你可以通过在终端中通过 <code>cpp -dM /dev/null</code> 命令来查看宏定义的列表。我看了一下是<code>#define _LP64 1</code>。)</p> <p>更新：在 这位大神的 <a href="http://yulingtianxia.com/blog/2014/11/05/objective-c-runtime/" target="_blank" rel="noopener noreferrer">文章<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 里了解到了这些宏定义代表的意义分别是：32 位，64位兼容版，64位不兼容版。我的属于 64 位兼容版。</p> <div class="language- extra-class"><pre class="language-text"><code>// objc-runtime-new.h line 485 
+// Leaks-compatible version that steals low bits only.
+
+// class or superclass has .cxx_construct implementation
+#define RW_HAS_CXX_CTOR       (1&lt;&lt;18)
+// class or superclass has .cxx_destruct implementation
+#define RW_HAS_CXX_DTOR       (1&lt;&lt;17)
+// class or superclass has default alloc/allocWithZone: implementation
+// Note this is is stored in the metaclass.
+#define RW_HAS_DEFAULT_AWZ    (1&lt;&lt;16)
+// class's instances requires raw isa
+#define RW_REQUIRES_RAW_ISA   (1&lt;&lt;15)
+
+// class is a Swift class from the pre-stable Swift ABI
+#define FAST_IS_SWIFT_LEGACY    (1UL&lt;&lt;0)
+// class is a Swift class from the stable Swift ABI
+#define FAST_IS_SWIFT_STABLE    (1UL&lt;&lt;1)
+// class or superclass has default retain/release/autorelease/retainCount/
+//   _tryRetain/_isDeallocating/retainWeakReference/allowsWeakReference
+#define FAST_HAS_DEFAULT_RR     (1UL&lt;&lt;2)
+// data pointer
+#define FAST_DATA_MASK          0x00007ffffffffff8UL
+</code></pre></div><p>这些都是标志位，利用空闲的空间来存储关于当前类的一些信息。比如下面这些是 与 <code>bits</code> 进行按位与运算来获取。其他的则通过与 <code>class_rw_t</code> 中的 <code>flags</code> 按位与运算获取。</p> <div class="language- extra-class"><pre class="language-text"><code>// FAST_DATA_MASK
+0000 0000 0000 0000 0111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1000
+// FAST_IS_SWIFT_LEGACY
+0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0001
+// FAST_IS_SWIFT_STABLE
+0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0010
+// FAST_HAS_DEFAULT_RR
+0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0100
+</code></pre></div><p>综合上面的内容我们可以看出来 <code>class_data_bits_t</code> 结构体主要作用就是存储 <code>class_rw_t</code> 的地址及一些当前类的信息。更多的信息还是在 <code>class_rw_t</code> 中。</p> <h2 id="class-rw-t-和-class-ro-t"><a href="#class-rw-t-和-class-ro-t" aria-hidden="true" class="header-anchor">#</a> <code>class_rw_t</code> 和 <code>class_ro_t</code></h2> <div class="language- extra-class"><pre class="language-text"><code>// objc-runtime-new.h lina 826
+struct class_rw_t {
+    // Be warned that Symbolication knows the layout of this structure.
+    // 一些类相关的标志位，更多的内容可以看 objc-runtime-new.h line 390
+    uint32_t flags;
+    uint32_t version;
+
+    const class_ro_t *ro;
+
+    method_array_t methods;
+    property_array_t properties;
+    protocol_array_t protocols;
+
+    Class firstSubclass;
+    Class nextSiblingClass;
+
+    char *demangledName;
+}
+</code></pre></div><p>我们可以看出有一个名字非常类似的 <code>class_ro_t</code> 结构体，它的结构如下。</p> <div class="language- extra-class"><pre class="language-text"><code>// objc-runtime-new.h lina 553
+struct class_ro_t {
+    uint32_t flags;
+    uint32_t instanceStart;
+    uint32_t instanceSize;
+    uint32_t reserved;
+
+    const uint8_t * ivarLayout;
+    
+    const char * name;
+    method_list_t * baseMethodList;
+    protocol_list_t * baseProtocols;
+    const ivar_list_t * ivars;
+
+    const uint8_t * weakIvarLayout;
+    property_list_t *baseProperties;
+
+    method_list_t *baseMethods() const {
+        return baseMethodList;
+    }
+};
+</code></pre></div><blockquote><p>这里的 'rw' 和 ro' 分别表示 'readwrite' 和 'readonly'。class_ro_t是一个指向常量的指针，存储来编译器决定了的属性、方法和遵守协议。</p></blockquote> <p>为了更好的理解上面这句话，需要去读一下 <code>realizeClass()</code> 这个函数。</p> <div class="language- extra-class"><pre class="language-text"><code>// objc-runtime-new.mm line 1858
+static Class realizeClass(Class cls)
+{
+    const class_ro_t *ro;
+    class_rw_t *rw;
+    ...
+    ro = (const class_ro_t *)cls-&gt;data();
+    if (ro-&gt;flags &amp; RO_FUTURE) {
+        // This was a future class. rw data is already allocated.
+        rw = cls-&gt;data();
+        ro = cls-&gt;data()-&gt;ro;
+        cls-&gt;changeInfo(RW_REALIZED|RW_REALIZING, RW_FUTURE);
+    } else {
+        // Normal class. Allocate writeable class data.
+        rw = (class_rw_t *)calloc(sizeof(class_rw_t), 1);
+        rw-&gt;ro = ro;
+        rw-&gt;flags = RW_REALIZED|RW_REALIZING;
+        cls-&gt;setData(rw);
+    }
+
+    ...
+
+    methodizeClass(cls);
+
+}
+</code></pre></div><p>我们都知道类的实力化是在 <code>main</code> 函数调用之前进行的。这时候会调用 <code>realizeClass</code>函数。</p> <p>调用 <code>realizeClass</code> 函数之前 <code>class_data_bits_t *data</code> 指向的是 <code>class_ro_t</code> 结构体，它是在编译期间就确定的。</p> <p><img src="/blog/assets/img/24.94a4e85f.png" alt=""></p> <blockquote><p>图片来自 <a href="https://github.com/draveness/analyze/blob/master/contents/objc/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90%20ObjC%20%E4%B8%AD%E6%96%B9%E6%B3%95%E7%9A%84%E7%BB%93%E6%9E%84.md" target="_blank" rel="noopener noreferrer">Dravenss<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></blockquote> <p>然后我们看到在 <code>realizeClass</code> 函数中下面几步操作。</p> <ol><li><code>ro = (const class_ro_t *)cls-&gt;data();</code> 获取编译期间就确定的 <code>class_ro_t</code></li> <li><code>rw = (class_rw_t *)calloc(sizeof(class_rw_t), 1);</code> 初始化 <code>class_rw_t</code> 结构体</li> <li><code>rw-&gt;ro = ro;</code> <code>rw-&gt;flags = RW_REALIZED|RW_REALIZING;</code> 设置 <code>class_rw_t</code> 结构体</li> <li><code>cls-&gt;setData(rw);</code> 设置类的 data</li></ol> <p><code>realizeClass</code> 执行后</p> <p><img src="/blog/assets/img/25.9451e244.png" alt=""></p> <blockquote><p>图片来自 <a href="https://github.com/draveness/analyze/blob/master/contents/objc/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90%20ObjC%20%E4%B8%AD%E6%96%B9%E6%B3%95%E7%9A%84%E7%BB%93%E6%9E%84.md" target="_blank" rel="noopener noreferrer">Dravenss<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></blockquote> <p>如果在上面 <code>cls-&gt;setData(rw);</code> 执行之后打断点的话你会发现 <code>rw</code> 的方法列表中是空的，最后需要通过 <code>methodizeClass</code> 函数来将 <code>ro</code> 里面的 <code>baseMethods</code>、<code>baseProperties</code>、<code>baseProtocols</code> 分别添加到 <code>rw</code> 中的 <code>methods</code>、<code>properties</code>、<code>protocols</code> 之中。</p> <p>这样以来，在运行时的时候添加的方法，以及 category 中的方法被添加到 <code>rw</code> 之中。这也解释了为什么 category 不能添加成员变量。因为成员变量相关的信息是放于 <code>ro</code> 中的，它是 readonly 的。</p> <h2 id="method"><a href="#method" aria-hidden="true" class="header-anchor">#</a> <code>Method</code></h2> <p>通过代码我们看出 <code>class_rw_t</code> 的 <code>method_array_t methods</code> 和 <code>class_ro_t</code> 的 <code>method_list_t * baseMethodList</code> 都是存储 <code>method_t</code> 的容器。<code>method_t</code> 就是用来表示一个方法的数据类型。</p> <div class="language- extra-class"><pre class="language-text"><code>// objc-private.h line 186
+typedef struct method_t *Method;
+
+// objc-runtime-new.h line 222
+struct method_t {
+    SEL name;
+    const char *types;
+    MethodListIMP imp;
+};
+
+// objc.h line 50
+/// An opaque type that represents a method selector.
+typedef struct objc_selector *SEL;
+
+// objc.h line 52
+/// A pointer to the function of a method implementation. 
+typedef void (*IMP)(void /* id, SEL, ... */ ); 
+</code></pre></div><h3 id="sel"><a href="#sel" aria-hidden="true" class="header-anchor">#</a> <code>SEL</code></h3> <p><code>SEL</code> ：方法选择器，代码中 <code>SEL</code> 就是 <code>objc_selector</code> 结构体的指针。不过在源码中并没有找到 <code>objc_selector</code> 的定义。但根据使用经验可以得出以下结论。</p> <ol><li><code>objc_selector</code> 在编译时会根据每个方法名和参数序列生成唯一标识</li> <li>与类无关，相同名字的方法即使在不同类中定义，它们的 <code>SEL</code> 也相同</li></ol> <h3 id="const-char-types"><a href="#const-char-types" aria-hidden="true" class="header-anchor">#</a> <code>const char *types</code></h3> <p>这是方法的类型编码，里面有对应的参数类型和返回值类型。具体信息可以参考 <a href="https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtTypeEncodings.html" target="_blank" rel="noopener noreferrer">官方文档<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 和 <a href="http://blog.sunnyxx.com/2016/08/13/reunderstanding-runtime-1/" target="_blank" rel="noopener noreferrer">重识 Objective-C Runtime - 看透 Type 与 Value<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>。</p> <h3 id="imp"><a href="#imp" aria-hidden="true" class="header-anchor">#</a> <code>IMP</code></h3> <p><code>IMP</code> 本质上就是一个函数指针，指向方法的实现。</p> <h2 id="ivar"><a href="#ivar" aria-hidden="true" class="header-anchor">#</a> <code>Ivar</code></h2> <p>通过代码可以知道 <code>ivar_list_t</code> 就是存储成员变量的容器。它里面存储的就是 <code>ivar_t</code>。</p> <div class="language- extra-class"><pre class="language-text"><code>// objc-private.h line 187
+typedef struct ivar_t *Ivar;
+
+// objc-runtime-new.h line 237
+struct ivar_t {
+    int32_t *offset; // 基地址偏移
+    const char *name; // 变量名
+    const char *type; // 变量类型
+    // alignment is sometimes -1; use alignment() instead
+    uint32_t alignment_raw;
+    uint32_t size;
+}
+</code></pre></div><p>OC 中许多的字典转模型的框架都是利用 <code>ivar_t</code> 的结构开实现“反射”。</p> <p>如果通过 <code>class_copyIvarList</code> 函数获取的会在原本的属性名前加上一个下划线。</p> <h2 id="objc-property-t"><a href="#objc-property-t" aria-hidden="true" class="header-anchor">#</a> <code>objc_property_t</code></h2> <div class="language- extra-class"><pre class="language-text"><code>// objc-private.h line 189
+typedef struct property_t *objc_property_t;
+
+// objc-runtime-new.h line 259
+struct property_t {
+    const char *name;
+    const char *attributes;
+};
+</code></pre></div><p>这里面需要注意的就是 <code>attributes</code>，它来描述属性的类型，跟 <code>method_t</code> 中的 <code>types</code>
+类似。更多的信息可以查看 <a href="https://www.jianshu.com/p/cefa1da5e775" target="_blank" rel="noopener noreferrer">这篇文章<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>。</p> <p>另外通过 <code>class_copyPropertyList</code> 获取的属性名是没有下划线的。</p> <h2 id="protocol-t"><a href="#protocol-t" aria-hidden="true" class="header-anchor">#</a> <code>protocol_t</code></h2> <div class="language- extra-class"><pre class="language-text"><code>// objc-runtime-new.h line 296
+struct protocol_t : objc_object {
+    const char *mangledName;
+    struct protocol_list_t *protocols;
+    method_list_t *instanceMethods;
+    method_list_t *classMethods;
+    method_list_t *optionalInstanceMethods;
+    method_list_t *optionalClassMethods;
+    property_list_t *instanceProperties;
+    uint32_t size;   // sizeof(protocol_t)
+    uint32_t flags;
+    // Fields below this point are not always present on disk.
+    const char **_extendedMethodTypes;
+    const char *_demangledName;
+    property_list_t *_classProperties;
+    ...
+}
+</code></pre></div><p>复杂性超出了预料，而且通过代码我们可以看出来 <code>protocol_t</code> 继承自 <code>objc_object</code>。因此它也是一个类。</p> <ul><li>mangledName和_demangledName
+这个东西来源于c++的name mangling（命名重整）技术，在c++里面是用来区别重载时的函数。</li> <li>instanceMethods和optionalInstanceMethods
+对应的是实例方法，可选实例方法，可选就是写在@optional之后的方法。</li> <li>classMethods和optionalClassMethods
+与上面对应，分别是类方法，可选类方法</li> <li>instanceProperties
+实例属性。奇怪的是这里为什么不区分必须还是可选？</li> <li>_classProperties
+类属性。挺少见的，举个例子：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>// 这是常见的属性声明，也就是对象属性
+@property (nonatomic, assign) NSInteger count;
+// 这是类属性，与类方法一样，通过类名调用
+@property (class, nonatomic, copy) NSString *name;
+</code></pre></div><ul><li>protocols
+此协议遵循的协议</li></ul> <blockquote><p>以上介绍来自 <a href="https://www.jianshu.com/p/fe8048524e67" target="_blank" rel="noopener noreferrer">这里<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></blockquote> <h2 id="category"><a href="#category" aria-hidden="true" class="header-anchor">#</a> <code>Category</code></h2> <div class="language- extra-class"><pre class="language-text"><code>// objc-private.h line 188
+typedef struct category_t *Category;
+
+// objc-runtime-new.h line 1381
+struct category_t {
+    const char *name;
+    classref_t cls;
+    struct method_list_t *instanceMethods;
+    struct method_list_t *classMethods;
+    struct protocol_list_t *protocols;
+    struct property_list_t *instanceProperties;
+    // Fields below this point are not always present on disk.
+    struct property_list_t *_classProperties;
+    ...
+};
+</code></pre></div><blockquote><p>可以看出 <code>category</code> 的可为（可以添加实例方法，类方法，甚至可以实现协议，添加属性）和不可为（无法添加实例变量）。</p></blockquote> <p>在上面我们了解到 <code>realizeClass</code> 函数中最后会调用 <code>methodizeClass</code> 函数，它会调用 <code>attachCategories</code> 函数来将 <code>class_rw_t</code> 中的 <code>method_array_t</code>, <code>property_array_t</code>, <code>protocol_array_t</code> 数组中分别添加到 <code>method_list_t</code>, <code>property_list_t</code>, <code>protocol_list_t</code> 中。</p> <div class="language- extra-class"><pre class="language-text"><code>// objc-runtime-new.mm line 759
+// Attach method lists and properties and protocols from categories to a class.
+// Assumes the categories in cats are all loaded and sorted by load order, 
+// oldest categories first.
+static void 
+attachCategories(Class cls, category_list *cats, bool flush_caches)
+{
+    ...
+    // fixme rearrange to remove these intermediate allocations
+    method_list_t **mlists = (method_list_t **)
+        malloc(cats-&gt;count * sizeof(*mlists));
+    property_list_t **proplists = (property_list_t **)
+        malloc(cats-&gt;count * sizeof(*proplists));
+    protocol_list_t **protolists = (protocol_list_t **)
+        malloc(cats-&gt;count * sizeof(*protolists));
+    ...
+    auto rw = cls-&gt;data();
+
+    prepareMethodLists(cls, mlists, mcount, NO, fromBundle);
+    rw-&gt;methods.attachLists(mlists, mcount);
+    free(mlists);
+    if (flush_caches  &amp;&amp;  mcount &gt; 0) flushCaches(cls);
+
+    rw-&gt;properties.attachLists(proplists, propcount);
+    free(proplists);
+
+    rw-&gt;protocols.attachLists(protolists, protocount);
+    free(protolists);
+}
+</code></pre></div><p>关于分类的更多信息可以查看美团的<a href="https://tech.meituan.com/2015/03/03/diveintocategory.html" target="_blank" rel="noopener noreferrer">这篇文章<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>。</p> <h2 id="qa-一些问答"><a href="#qa-一些问答" aria-hidden="true" class="header-anchor">#</a> QA 一些问答</h2> <h3 id="_1-分类和协议中能否添加属性和成员变量"><a href="#_1-分类和协议中能否添加属性和成员变量" aria-hidden="true" class="header-anchor">#</a> 1. 分类和协议中能否添加属性和成员变量</h3> <p>先上代码。</p> <div class="language- extra-class"><pre class="language-text"><code>@protocol LenderProtocol &lt;NSObject&gt;
+@property float age;
+@end
+
+@interface Lender : NSObject&lt;LenderProtocol&gt;
+@property float name;
+@end
+@implementation Lender
+//@synthesize age;
+@end
+
+@interface Lender (Category)
+@property float score;
+@end
+@implementation Lender (Category)
+//@dynamic score;
+@end
+
+int main(int argc, const char * argv[]) {
+    @autoreleasepool {
+        id LenderClass = objc_getClass(&quot;Lender&quot;);
+        unsigned int outCount, i;
+        objc_property_t *properties = class_copyPropertyList(LenderClass, &amp;outCount);
+        for (i = 0; i &lt; outCount; ++i) {
+            objc_property_t property = properties[i];
+            NSLog(@&quot;%s---%s&quot;, property_getName(property), property_getAttributes(property));
+        }
+        NSLog(@&quot;\n==============\n&quot;);
+        unsigned int ivarCount, j;
+        Ivar *ivars = class_copyIvarList(LenderClass, &amp;ivarCount);
+        for (j = 0; j &lt; ivarCount; ++j) {
+            Ivar ivar = ivars[j];
+            NSLog(@&quot;%s---%s---%td&quot;, ivar_getName(ivar), ivar_getTypeEncoding(ivar), ivar_getOffset(ivar));
+        }
+        NSLog(@&quot;\n==============\n&quot;);
+        unsigned int methodCount, k;
+        Method *methods = class_copyMethodList(LenderClass, &amp;methodCount);
+        for (k = 0; k &lt; methodCount; ++k) {
+            Method method = methods[k];
+            NSLog(@&quot;%@----%s&quot;, NSStringFromSelector(method_getName(method)), method_getTypeEncoding(method));
+        }
+    }
+    return 0;
+}
+</code></pre></div><p>输出</p> <div class="language- extra-class"><pre class="language-text"><code>2019-03-01 18:07:11.298699+0800 test[5126:1225981] score---Tf
+2019-03-01 18:07:11.298863+0800 test[5126:1225981] name---Tf,V_name
+2019-03-01 18:07:11.298873+0800 test[5126:1225981] hash---TQ,R
+2019-03-01 18:07:11.298882+0800 test[5126:1225981] superclass---T#,R
+2019-03-01 18:07:11.298889+0800 test[5126:1225981] description---T@&quot;NSString&quot;,R,C
+2019-03-01 18:07:11.298897+0800 test[5126:1225981] debugDescription---T@&quot;NSString&quot;,R,C
+2019-03-01 18:07:11.298905+0800 test[5126:1225981] age---Tf
+2019-03-01 18:07:11.298912+0800 test[5126:1225981] 
+==============
+2019-03-01 18:07:11.298949+0800 test[5126:1225981] _name---f---8
+2019-03-01 18:07:11.298959+0800 test[5126:1225981] 
+==============
+2019-03-01 18:07:11.299041+0800 test[5126:1225981] name----f16@0:8
+2019-03-01 18:07:11.299119+0800 test[5126:1225981] setName:----v20@0:8f16
+Program ended with exit code: 0
+</code></pre></div><p>答案是他们都可以添加属性，但是无法添加成员变量。其中对于协议中声明的属性，遵守该协议的类可以通过 <code>@synthesize</code> 来生成成员变量和 setter getter。（好吧，虽然没什么卵用）。</p> <h2 id="参考"><a href="#参考" aria-hidden="true" class="header-anchor">#</a> 参考</h2> <ol><li><a href="http://yulingtianxia.com/blog/2014/11/05/objective-c-runtime/" target="_blank" rel="noopener noreferrer">Objective-C Runtime<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://github.com/draveness/analyze/blob/master/contents/objc/%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90%20ObjC%20%E4%B8%AD%E6%96%B9%E6%B3%95%E7%9A%84%E7%BB%93%E6%9E%84.md" target="_blank" rel="noopener noreferrer">深入解析 ObjC 中方法的结构<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://github.com/bestswifter/blog/blob/master/articles/objc-runtime.md" target="_blank" rel="noopener noreferrer">结合 category 工作原理分析 OC2.0 中的 runtime<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://tech.meituan.com/2015/03/03/diveintocategory.html" target="_blank" rel="noopener noreferrer">深入理解Objective-C：Category<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://halfrost.com/objc_runtime_isa_class/" target="_blank" rel="noopener noreferrer">神经病院 Objective-C Runtime 入院第一天—— isa 和 Class<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="http://www.starming.com/2015/04/01/objc-runtime/" target="_blank" rel="noopener noreferrer">Objc Runtime 总结<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ol></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">7/24/2019, 1:27:08 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.a54d2909.js" defer></script><script src="/blog/assets/js/2.fd76eafa.js" defer></script><script src="/blog/assets/js/24.a433853c.js" defer></script>
+  </body>
+</html>

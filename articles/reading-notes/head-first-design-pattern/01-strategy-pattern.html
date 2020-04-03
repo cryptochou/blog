@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>策略模式 | 周小可</title>
+    <meta name="description" content="实践不仅是检验真理的标准，而且是唯一的标准。">
+    
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.4a9e7301.css" as="style"><link rel="preload" href="/blog/assets/js/app.a54d2909.js" as="script"><link rel="preload" href="/blog/assets/js/2.fd76eafa.js" as="script"><link rel="preload" href="/blog/assets/js/32.434785d8.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.15308436.js"><link rel="prefetch" href="/blog/assets/js/11.a771847c.js"><link rel="prefetch" href="/blog/assets/js/12.feaf4627.js"><link rel="prefetch" href="/blog/assets/js/13.e37a4c0b.js"><link rel="prefetch" href="/blog/assets/js/14.de6f1bc3.js"><link rel="prefetch" href="/blog/assets/js/15.4427f88c.js"><link rel="prefetch" href="/blog/assets/js/16.9d3218d0.js"><link rel="prefetch" href="/blog/assets/js/17.d9d07dad.js"><link rel="prefetch" href="/blog/assets/js/18.c4b7480b.js"><link rel="prefetch" href="/blog/assets/js/19.4f9f264a.js"><link rel="prefetch" href="/blog/assets/js/20.06a48f5c.js"><link rel="prefetch" href="/blog/assets/js/21.4257293a.js"><link rel="prefetch" href="/blog/assets/js/22.85e5ef53.js"><link rel="prefetch" href="/blog/assets/js/23.0dfc6d99.js"><link rel="prefetch" href="/blog/assets/js/24.a433853c.js"><link rel="prefetch" href="/blog/assets/js/25.97f2b81e.js"><link rel="prefetch" href="/blog/assets/js/26.532cd082.js"><link rel="prefetch" href="/blog/assets/js/27.96db6f2e.js"><link rel="prefetch" href="/blog/assets/js/28.a1f6a8bc.js"><link rel="prefetch" href="/blog/assets/js/29.b2c2bd91.js"><link rel="prefetch" href="/blog/assets/js/3.98209718.js"><link rel="prefetch" href="/blog/assets/js/30.4ab75552.js"><link rel="prefetch" href="/blog/assets/js/31.a263582b.js"><link rel="prefetch" href="/blog/assets/js/33.73f26596.js"><link rel="prefetch" href="/blog/assets/js/34.c4fb3767.js"><link rel="prefetch" href="/blog/assets/js/35.e8ff9422.js"><link rel="prefetch" href="/blog/assets/js/36.0252fde3.js"><link rel="prefetch" href="/blog/assets/js/37.1e89f062.js"><link rel="prefetch" href="/blog/assets/js/38.d84daf6a.js"><link rel="prefetch" href="/blog/assets/js/39.9bf7e592.js"><link rel="prefetch" href="/blog/assets/js/4.068bd1c5.js"><link rel="prefetch" href="/blog/assets/js/40.9d39ea55.js"><link rel="prefetch" href="/blog/assets/js/41.42a663a1.js"><link rel="prefetch" href="/blog/assets/js/42.3a751d2f.js"><link rel="prefetch" href="/blog/assets/js/43.3a335356.js"><link rel="prefetch" href="/blog/assets/js/44.7d01f77e.js"><link rel="prefetch" href="/blog/assets/js/45.94380ee0.js"><link rel="prefetch" href="/blog/assets/js/46.c3daaae4.js"><link rel="prefetch" href="/blog/assets/js/47.0ef93bcd.js"><link rel="prefetch" href="/blog/assets/js/48.5b1a24b8.js"><link rel="prefetch" href="/blog/assets/js/49.c39c7fef.js"><link rel="prefetch" href="/blog/assets/js/5.bb18b958.js"><link rel="prefetch" href="/blog/assets/js/50.43f38f52.js"><link rel="prefetch" href="/blog/assets/js/51.fb3a6504.js"><link rel="prefetch" href="/blog/assets/js/52.d09c3b70.js"><link rel="prefetch" href="/blog/assets/js/53.06f6490b.js"><link rel="prefetch" href="/blog/assets/js/54.437f5d1a.js"><link rel="prefetch" href="/blog/assets/js/55.eb0681e9.js"><link rel="prefetch" href="/blog/assets/js/56.089548ed.js"><link rel="prefetch" href="/blog/assets/js/57.d545c4fe.js"><link rel="prefetch" href="/blog/assets/js/58.70be975f.js"><link rel="prefetch" href="/blog/assets/js/59.eebe4e88.js"><link rel="prefetch" href="/blog/assets/js/6.4d3dd8e5.js"><link rel="prefetch" href="/blog/assets/js/60.91b3ed77.js"><link rel="prefetch" href="/blog/assets/js/61.71e6c721.js"><link rel="prefetch" href="/blog/assets/js/62.28e384bf.js"><link rel="prefetch" href="/blog/assets/js/63.6646438b.js"><link rel="prefetch" href="/blog/assets/js/64.302d43d4.js"><link rel="prefetch" href="/blog/assets/js/65.271d4d28.js"><link rel="prefetch" href="/blog/assets/js/66.90a8840e.js"><link rel="prefetch" href="/blog/assets/js/67.1ad437d0.js"><link rel="prefetch" href="/blog/assets/js/68.90855765.js"><link rel="prefetch" href="/blog/assets/js/69.f6f5adc6.js"><link rel="prefetch" href="/blog/assets/js/7.481a6611.js"><link rel="prefetch" href="/blog/assets/js/70.3853662a.js"><link rel="prefetch" href="/blog/assets/js/71.98d8eeee.js"><link rel="prefetch" href="/blog/assets/js/72.fff2c9b2.js"><link rel="prefetch" href="/blog/assets/js/73.3d888aa9.js"><link rel="prefetch" href="/blog/assets/js/74.f4c59cfe.js"><link rel="prefetch" href="/blog/assets/js/75.39a7ef7e.js"><link rel="prefetch" href="/blog/assets/js/76.9faa10ae.js"><link rel="prefetch" href="/blog/assets/js/77.ac1b1239.js"><link rel="prefetch" href="/blog/assets/js/78.614fab51.js"><link rel="prefetch" href="/blog/assets/js/79.91b89113.js"><link rel="prefetch" href="/blog/assets/js/8.a7cdda78.js"><link rel="prefetch" href="/blog/assets/js/80.aaa67e21.js"><link rel="prefetch" href="/blog/assets/js/81.1e302fb8.js"><link rel="prefetch" href="/blog/assets/js/82.fce58955.js"><link rel="prefetch" href="/blog/assets/js/83.36cc12dd.js"><link rel="prefetch" href="/blog/assets/js/84.512f6776.js"><link rel="prefetch" href="/blog/assets/js/85.b32496e1.js"><link rel="prefetch" href="/blog/assets/js/86.f741c1ec.js"><link rel="prefetch" href="/blog/assets/js/87.29d27f1f.js"><link rel="prefetch" href="/blog/assets/js/88.3b0964ad.js"><link rel="prefetch" href="/blog/assets/js/89.12851ce5.js"><link rel="prefetch" href="/blog/assets/js/9.48986d07.js"><link rel="prefetch" href="/blog/assets/js/90.2f222f77.js"><link rel="prefetch" href="/blog/assets/js/91.edf5550b.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.4a9e7301.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">周小可</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/gcd/" class="nav-link">GCD</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/locks/" class="nav-link">iOS中的锁</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/performance-optimization/" class="nav-link">性能优化</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/responder/" class="nav-link">事件响应</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/image_decode/" class="nav-link">图片编解码</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/nshashtable-nsmaptable/" class="nav-link">NSHashTable 和 NSMapTable</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/dttext/" class="nav-link">图文混排与 DTCoreText</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/mvvm/" class="nav-link">MVVM 实战</a></li><li class="dropdown-item"><!----> <a href="https://github.com/hnxczk/InfiniteTree" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  InfiniteTree
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/hnxczk/ScrollViewAutoAdjust" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ScrollViewAutoAdjust
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="/blog/articles/instruments/" class="nav-link">Instruments 分析</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/note/" class="nav-link">笔记</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/mdn/" class="nav-link">MDN 学习笔记</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/02/" class="nav-link">JavaScript 类型</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/03/" class="nav-link">JavaScript 对象和原型链</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/05/" class="nav-link">JavaScript 执行上下文和执行栈</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/06/" class="nav-link">JavaScript 作用域链与闭包</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/head-first-design-pattern/" class="nav-link router-link-active">Head First 设计模式</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/Graphic-Design-Patterns/" class="nav-link">图说设计模式</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-algorithm/" class="nav-link">极客时间-算法</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/" class="nav-link">极客时间-重学前端</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/network-study/" class="nav-link">极客时间-网络</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">源码解析</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/sd/" class="nav-link">SDWebImage</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/runtime/index/" class="nav-link">Runtime</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">算法</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/hash-map/" class="nav-link">哈希表</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/search/" class="nav-link">查找</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/algorithm-interview/" class="nav-link">面试遇到的算法</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">网络</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/networking/" class="nav-link">哈希表</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/http-https/" class="nav-link">HTTP与HTTPS</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">工程化</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/ios-coding-style/" class="nav-link">iOS 代码规范</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/ios-code-review/" class="nav-link">iOS 代码审核</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/configura/" class="nav-link">多环境配置</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/ios-app-on-line/" class="nav-link">开发者账号相关</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/uml/" class="nav-link">UML类图</a></li></ul></div></div> <a href="https://github.com/hnxczk/hnxczk.github.io.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/gcd/" class="nav-link">GCD</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/locks/" class="nav-link">iOS中的锁</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/performance-optimization/" class="nav-link">性能优化</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/responder/" class="nav-link">事件响应</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/image_decode/" class="nav-link">图片编解码</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/nshashtable-nsmaptable/" class="nav-link">NSHashTable 和 NSMapTable</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/dttext/" class="nav-link">图文混排与 DTCoreText</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/mvvm/" class="nav-link">MVVM 实战</a></li><li class="dropdown-item"><!----> <a href="https://github.com/hnxczk/InfiniteTree" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  InfiniteTree
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/hnxczk/ScrollViewAutoAdjust" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ScrollViewAutoAdjust
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="/blog/articles/instruments/" class="nav-link">Instruments 分析</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/note/" class="nav-link">笔记</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/mdn/" class="nav-link">MDN 学习笔记</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/02/" class="nav-link">JavaScript 类型</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/03/" class="nav-link">JavaScript 对象和原型链</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/05/" class="nav-link">JavaScript 执行上下文和执行栈</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/06/" class="nav-link">JavaScript 作用域链与闭包</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/head-first-design-pattern/" class="nav-link router-link-active">Head First 设计模式</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/Graphic-Design-Patterns/" class="nav-link">图说设计模式</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-algorithm/" class="nav-link">极客时间-算法</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/" class="nav-link">极客时间-重学前端</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/network-study/" class="nav-link">极客时间-网络</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">源码解析</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/sd/" class="nav-link">SDWebImage</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/runtime/index/" class="nav-link">Runtime</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">算法</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/hash-map/" class="nav-link">哈希表</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/search/" class="nav-link">查找</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/algorithm-interview/" class="nav-link">面试遇到的算法</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">网络</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/networking/" class="nav-link">哈希表</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/http-https/" class="nav-link">HTTP与HTTPS</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">工程化</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/ios-coding-style/" class="nav-link">iOS 代码规范</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/ios-code-review/" class="nav-link">iOS 代码审核</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/configura/" class="nav-link">多环境配置</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/ios-app-on-line/" class="nav-link">开发者账号相关</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/uml/" class="nav-link">UML类图</a></li></ul></div></div> <a href="https://github.com/hnxczk/hnxczk.github.io.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>策略模式</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/articles/reading-notes/head-first-design-pattern/01-strategy-pattern.html#总结" class="sidebar-link">总结</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/articles/reading-notes/head-first-design-pattern/01-strategy-pattern.html#优点" class="sidebar-link">优点</a></li><li class="sidebar-sub-header"><a href="/blog/articles/reading-notes/head-first-design-pattern/01-strategy-pattern.html#使用情况" class="sidebar-link">使用情况</a></li><li class="sidebar-sub-header"><a href="/blog/articles/reading-notes/head-first-design-pattern/01-strategy-pattern.html#设计原则" class="sidebar-link">设计原则</a></li></ul></li><li><a href="/blog/articles/reading-notes/head-first-design-pattern/01-strategy-pattern.html#模拟鸭子的游戏" class="sidebar-link">模拟鸭子的游戏</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/articles/reading-notes/head-first-design-pattern/01-strategy-pattern.html#利用继承" class="sidebar-link">利用继承</a></li><li class="sidebar-sub-header"><a href="/blog/articles/reading-notes/head-first-design-pattern/01-strategy-pattern.html#利用接口" class="sidebar-link">利用接口</a></li><li class="sidebar-sub-header"><a href="/blog/articles/reading-notes/head-first-design-pattern/01-strategy-pattern.html#把问题归零" class="sidebar-link">把问题归零</a></li><li class="sidebar-sub-header"><a href="/blog/articles/reading-notes/head-first-design-pattern/01-strategy-pattern.html#分开变化的和不变化的部分" class="sidebar-link">分开变化的和不变化的部分</a></li><li class="sidebar-sub-header"><a href="/blog/articles/reading-notes/head-first-design-pattern/01-strategy-pattern.html#‘有一个‘可能比’是一个‘更好" class="sidebar-link">‘有一个‘可能比’是一个‘更好</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="策略模式"><a href="#策略模式" aria-hidden="true" class="header-anchor">#</a> 策略模式</h1> <h2 id="总结"><a href="#总结" aria-hidden="true" class="header-anchor">#</a> 总结</h2> <p><strong>策略模式</strong>：定义了算法族，分别封装起来，让他们之间可以相互替换，此模式让算法的变化独立于使用算法的客户。</p> <h3 id="优点"><a href="#优点" aria-hidden="true" class="header-anchor">#</a> 优点</h3> <p>策略模式主要优点在于对“开闭原则”的完美支持，在不修改原有系统的基础上可以更换算法或者增加新的算法，它很好地管理算法族，提高了代码的复用性，是一种替换继承，避免多重条件转移语句的实现方式；其缺点在于客户端必须知道所有的策略类，并理解其区别，同时在一定程度上增加了系统中类的个数，可能会存在很多策略类。</p> <h3 id="使用情况"><a href="#使用情况" aria-hidden="true" class="header-anchor">#</a> 使用情况</h3> <p>在一个系统里面有许多类，它们之间的区别仅在于它们的行为，使用策略模式可以动态地让一个对象在许多行为中选择一种行为；一个系统需要动态地在几种算法中选择一种；避免使用难以维护的多重条件选择语句；希望在具体策略类中封装算法和与相关的数据结构</p> <h3 id="设计原则"><a href="#设计原则" aria-hidden="true" class="header-anchor">#</a> 设计原则</h3> <ol><li><strong>把会变化的部分抽取并封装起来，好让其他部分不受影响</strong></li> <li><strong>面对接口编程，而不是面向实现编程</strong></li> <li><strong>多用组合，少用继承</strong></li></ol> <h2 id="模拟鸭子的游戏"><a href="#模拟鸭子的游戏" aria-hidden="true" class="header-anchor">#</a> 模拟鸭子的游戏</h2> <h3 id="利用继承"><a href="#利用继承" aria-hidden="true" class="header-anchor">#</a> 利用继承</h3> <p>游戏中会出现各式各样的鸭子，熟悉面向对象思想的第一反应就是设计一个鸭子的父类（Duck），所有类型的鸭子都继承自该类。比如绿头鸭（MallardDuck）和红头鸭（RedheadDuck）。具体代码如下。</p> <div class="language- extra-class"><pre class="language-text"><code>@interface Duck : NSObject
+
+- (void)quack;
+- (void)swim;
+- (void)display;
+
+@end
+
+@implementation Duck
+
+- (void)quack
+{
+    NSLog(@&quot;呱呱&quot;);
+}
+
+- (void)swim
+{
+    NSLog(@&quot;swim&quot;);
+}
+
+- (void)display
+{
+    NSLog(@&quot;display&quot;);
+}
+
+@end
+
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>#import &quot;Duck.h&quot;
+
+@interface MallardDuck : Duck
+
+@end
+
+@implementation MallardDuck
+
+- (void)display
+{
+    NSLog(@&quot;display-绿头鸭&quot;);
+}
+
+@end
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>#import &quot;Duck.h&quot;
+
+@interface RedheadDuck : Duck
+
+@end
+
+@implementation RedheadDuck
+
+- (void)display
+{
+    NSLog(@&quot;display-红头鸭&quot;);
+}
+
+@end
+
+</code></pre></div><p>这样的话在需要不同的鸭子的时候分别实例化不同的对象就可以了。</p> <div class="language- extra-class"><pre class="language-text"><code>MallardDuck *mallarDuck = [[MallardDuck alloc] init];
+[mallarDuck display];
+        
+RedheadDuck *redheadDuck = [[RedheadDuck alloc] init];
+[redheadDuck display];
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>2018-06-18 20:34:47.878191+0800 01-SimUDuck[34855:1217414] display-绿头鸭
+2018-06-18 20:34:47.878693+0800 01-SimUDuck[34855:1217414] display-红头鸭
+</code></pre></div><p>目前来看是没有问题的，但是当我们需要一个 “fly” 功能的时候，我们会想着在父类（Duck）中添加一个 fly 方法的时候。这样就会有一个问题，就是有些鸭子是不会飞的（比如橡皮鸭子）。一种解决方法就是在橡皮鸭子（RubberDuck）中覆写父类的 fly 方法。</p> <div class="language- extra-class"><pre class="language-text"><code>@implementation RubberDuck
+
+- (void)quack
+{
+    NSLog(@&quot;吱吱&quot;);
+}
+
+- (void)display
+{
+    NSLog(@&quot;display-橡皮鸭子&quot;);
+}
+
+- (void)fly
+{
+    // 覆盖什么也不做
+}
+</code></pre></div><p>这样一来也能解决问题，但是当我们还有其他鸭子比如诱饵鸭子这种既不会叫也不会飞的鸭子的时候也要覆盖相应的方法。</p> <h3 id="利用接口"><a href="#利用接口" aria-hidden="true" class="header-anchor">#</a> 利用接口</h3> <p>利用接口的解决方案就是把单个的行为抽象为一个协议，当你的一种类型需要相关的行为的时候让它遵守协议并实现协议中的方法即可。这样的话依然无法优雅的实现相关需求。这是因为我们的项目不是一成不变的，或者说唯一不变的就是变化。当某个需求修改是这种实现方式需要修改各个实现该协议的类，这无疑是个大工程。</p> <h3 id="把问题归零"><a href="#把问题归零" aria-hidden="true" class="header-anchor">#</a> 把问题归零</h3> <p>设计原则</p> <p><strong>把会变化的部分抽取并封装起来，好让其他部分不受影响</strong></p> <h3 id="分开变化的和不变化的部分"><a href="#分开变化的和不变化的部分" aria-hidden="true" class="header-anchor">#</a> 分开变化的和不变化的部分</h3> <p>分析上面的例子我们可以看到除了 quack 和 fly 方法之外别的方法都是没有特别需要修改的，因此除了 Duck 外拆分出两组类，一个跟 quack 有关，一个跟 fly 有关。</p> <p>设计原则</p> <p><strong>面对接口编程，而不是面向实现编程</strong></p> <p>具体实现如下</p> <ol><li>声明两个协议 FlyBehavior 和 QuackBehavior</li></ol> <div class="language- extra-class"><pre class="language-text"><code>@protocol FlyBehavior&lt;NSObject&gt;
+
+- (void)fly;
+
+@end
+
+@protocol QuackBehavior&lt;NSObject&gt;
+
+- (void)qucak;
+
+@end
+</code></pre></div><ol start="2"><li>实现协议的几个类</li></ol> <div class="language- extra-class"><pre class="language-text"><code>@interface FlyWithWings : NSObject&lt;FlyBehavior&gt;
+
+@end
+
+@implementation FlyWithWings
+
+- (void)fly
+{
+    NSLog(@&quot;会飞的鸭子&quot;);
+}
+
+@end
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>@interface FlyWithWings : NSObject&lt;FlyBehavior&gt;
+
+@end
+
+@implementation FlyNoWay
+
+- (void)fly
+{
+    NSLog(@&quot;不会飞的鸭子&quot;);
+}
+
+@end
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>@interface Quack : NSObject&lt;QuackBehavior&gt;
+
+@end
+
+@implementation Quack
+
+- (void)qucak
+{
+    NSLog(@&quot;gua gua&quot;);
+}
+
+@end
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>@interface Squeak : NSObject&lt;QuackBehavior&gt;
+
+@end
+
+@implementation Squeak
+
+- (void)qucak
+{
+    NSLog(@&quot;zi zi&quot;);
+}
+
+@end
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>@interface MuteQuack : NSObject&lt;QuackBehavior&gt;
+
+@end
+
+@implementation MuteQuack
+
+- (void)qucak
+{
+    NSLog(@&quot;do nothing&quot;);
+}
+
+@end
+</code></pre></div><ol start="3"><li>修改 Duck 的内部实现，为其添加两个属性。</li></ol> <div class="language- extra-class"><pre class="language-text"><code>@interface Duck : NSObject
+
+@property (nonatomic, strong) id&lt;QuackBehavior&gt; quackBehavior;
+@property (nonatomic, strong) id&lt;FlyBehavior&gt; flyBehavior;
+
+- (void)performQuack;
+- (void)performFly;
+- (void)swim;
+- (void)display;
+
+@end
+
+@implementation Duck
+
+- (void)performQuack
+{
+    [self.quackBehavior qucak];
+}
+
+- (void)performFly
+{
+    [self.flyBehavior fly];
+}
+
+- (void)swim
+{
+    NSLog(@&quot;swim&quot;);
+}
+
+- (void)display
+{
+    NSLog(@&quot;display&quot;);
+}
+
+@end
+</code></pre></div><ol start="4"><li>声明一个特定类型的子类 MallardDuck， 并修改器初始化方法。</li></ol> <div class="language- extra-class"><pre class="language-text"><code>@interface MallardDuck : Duck
+
+@end
+
+@implementation MallardDuck
+
+- (instancetype)init
+{
+    if (self = [super init]) {
+        self.quackBehavior = [[Quack alloc] init];
+        self.flyBehavior = [[FlyWithWings alloc] init];
+    }
+    return self;
+}
+
+@end
+</code></pre></div><ol start="5"><li>这样以来在使用的时候直接出示化对应的子类。</li></ol> <div class="language- extra-class"><pre class="language-text"><code>MallardDuck *mallardDuck = [[MallardDuck alloc] init];
+[mallardDuck performFly];
+[mallardDuck performQuack];
+</code></pre></div><p>经过上面的几个步骤就实现了策略模式的设计，这样的好处就是把可变的与不可变的分离开来。这样一来就能在修改少部分代码的情况下实现功能的修改。</p> <p><img src="/blog/assets/img/01-strategy-pattern-1.b164b0c5.png" alt="关系图"></p> <p>说明</p> <img src="/blog/assets/img/01-strategy-pattern-2.bdaa0dfb.png" height="110"> <h3 id="‘有一个‘可能比’是一个‘更好"><a href="#‘有一个‘可能比’是一个‘更好" aria-hidden="true" class="header-anchor">#</a> ‘有一个‘可能比’是一个‘更好</h3> <p>“有一个”：每一个鸭子都有一个FlyBehavior和一个QuackBehavior，好将飞行和呱呱叫委托给它们代为处理。
+当你将两个类结合起来使用，如同本例一般，这就是组合，这种做法和“继承”不同的地方在于，鸭子的行为不是继承来的，而是和适当的行为对象“组合”来的。</p> <p>设计原则</p> <p><strong>多用组合，少用继承</strong></p> <p>使用组合建立系统具有很大的弹性，不仅可以将算法族封装成类，还可以动态的修改行为。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">7/24/2019, 1:27:08 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.a54d2909.js" defer></script><script src="/blog/assets/js/2.fd76eafa.js" defer></script><script src="/blog/assets/js/32.434785d8.js" defer></script>
+  </body>
+</html>

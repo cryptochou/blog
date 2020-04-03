@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>GCD | 周小可</title>
+    <meta name="description" content="实践不仅是检验真理的标准，而且是唯一的标准。">
+    
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.4a9e7301.css" as="style"><link rel="preload" href="/blog/assets/js/app.a54d2909.js" as="script"><link rel="preload" href="/blog/assets/js/2.fd76eafa.js" as="script"><link rel="preload" href="/blog/assets/js/26.532cd082.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.15308436.js"><link rel="prefetch" href="/blog/assets/js/11.a771847c.js"><link rel="prefetch" href="/blog/assets/js/12.feaf4627.js"><link rel="prefetch" href="/blog/assets/js/13.e37a4c0b.js"><link rel="prefetch" href="/blog/assets/js/14.de6f1bc3.js"><link rel="prefetch" href="/blog/assets/js/15.4427f88c.js"><link rel="prefetch" href="/blog/assets/js/16.9d3218d0.js"><link rel="prefetch" href="/blog/assets/js/17.d9d07dad.js"><link rel="prefetch" href="/blog/assets/js/18.c4b7480b.js"><link rel="prefetch" href="/blog/assets/js/19.4f9f264a.js"><link rel="prefetch" href="/blog/assets/js/20.06a48f5c.js"><link rel="prefetch" href="/blog/assets/js/21.4257293a.js"><link rel="prefetch" href="/blog/assets/js/22.85e5ef53.js"><link rel="prefetch" href="/blog/assets/js/23.0dfc6d99.js"><link rel="prefetch" href="/blog/assets/js/24.a433853c.js"><link rel="prefetch" href="/blog/assets/js/25.97f2b81e.js"><link rel="prefetch" href="/blog/assets/js/27.96db6f2e.js"><link rel="prefetch" href="/blog/assets/js/28.a1f6a8bc.js"><link rel="prefetch" href="/blog/assets/js/29.b2c2bd91.js"><link rel="prefetch" href="/blog/assets/js/3.98209718.js"><link rel="prefetch" href="/blog/assets/js/30.4ab75552.js"><link rel="prefetch" href="/blog/assets/js/31.a263582b.js"><link rel="prefetch" href="/blog/assets/js/32.434785d8.js"><link rel="prefetch" href="/blog/assets/js/33.73f26596.js"><link rel="prefetch" href="/blog/assets/js/34.c4fb3767.js"><link rel="prefetch" href="/blog/assets/js/35.e8ff9422.js"><link rel="prefetch" href="/blog/assets/js/36.0252fde3.js"><link rel="prefetch" href="/blog/assets/js/37.1e89f062.js"><link rel="prefetch" href="/blog/assets/js/38.d84daf6a.js"><link rel="prefetch" href="/blog/assets/js/39.9bf7e592.js"><link rel="prefetch" href="/blog/assets/js/4.068bd1c5.js"><link rel="prefetch" href="/blog/assets/js/40.9d39ea55.js"><link rel="prefetch" href="/blog/assets/js/41.42a663a1.js"><link rel="prefetch" href="/blog/assets/js/42.3a751d2f.js"><link rel="prefetch" href="/blog/assets/js/43.3a335356.js"><link rel="prefetch" href="/blog/assets/js/44.7d01f77e.js"><link rel="prefetch" href="/blog/assets/js/45.94380ee0.js"><link rel="prefetch" href="/blog/assets/js/46.c3daaae4.js"><link rel="prefetch" href="/blog/assets/js/47.0ef93bcd.js"><link rel="prefetch" href="/blog/assets/js/48.5b1a24b8.js"><link rel="prefetch" href="/blog/assets/js/49.c39c7fef.js"><link rel="prefetch" href="/blog/assets/js/5.bb18b958.js"><link rel="prefetch" href="/blog/assets/js/50.43f38f52.js"><link rel="prefetch" href="/blog/assets/js/51.fb3a6504.js"><link rel="prefetch" href="/blog/assets/js/52.d09c3b70.js"><link rel="prefetch" href="/blog/assets/js/53.06f6490b.js"><link rel="prefetch" href="/blog/assets/js/54.437f5d1a.js"><link rel="prefetch" href="/blog/assets/js/55.eb0681e9.js"><link rel="prefetch" href="/blog/assets/js/56.089548ed.js"><link rel="prefetch" href="/blog/assets/js/57.d545c4fe.js"><link rel="prefetch" href="/blog/assets/js/58.70be975f.js"><link rel="prefetch" href="/blog/assets/js/59.eebe4e88.js"><link rel="prefetch" href="/blog/assets/js/6.4d3dd8e5.js"><link rel="prefetch" href="/blog/assets/js/60.91b3ed77.js"><link rel="prefetch" href="/blog/assets/js/61.71e6c721.js"><link rel="prefetch" href="/blog/assets/js/62.28e384bf.js"><link rel="prefetch" href="/blog/assets/js/63.6646438b.js"><link rel="prefetch" href="/blog/assets/js/64.302d43d4.js"><link rel="prefetch" href="/blog/assets/js/65.271d4d28.js"><link rel="prefetch" href="/blog/assets/js/66.90a8840e.js"><link rel="prefetch" href="/blog/assets/js/67.1ad437d0.js"><link rel="prefetch" href="/blog/assets/js/68.90855765.js"><link rel="prefetch" href="/blog/assets/js/69.f6f5adc6.js"><link rel="prefetch" href="/blog/assets/js/7.481a6611.js"><link rel="prefetch" href="/blog/assets/js/70.3853662a.js"><link rel="prefetch" href="/blog/assets/js/71.98d8eeee.js"><link rel="prefetch" href="/blog/assets/js/72.fff2c9b2.js"><link rel="prefetch" href="/blog/assets/js/73.3d888aa9.js"><link rel="prefetch" href="/blog/assets/js/74.f4c59cfe.js"><link rel="prefetch" href="/blog/assets/js/75.39a7ef7e.js"><link rel="prefetch" href="/blog/assets/js/76.9faa10ae.js"><link rel="prefetch" href="/blog/assets/js/77.ac1b1239.js"><link rel="prefetch" href="/blog/assets/js/78.614fab51.js"><link rel="prefetch" href="/blog/assets/js/79.91b89113.js"><link rel="prefetch" href="/blog/assets/js/8.a7cdda78.js"><link rel="prefetch" href="/blog/assets/js/80.aaa67e21.js"><link rel="prefetch" href="/blog/assets/js/81.1e302fb8.js"><link rel="prefetch" href="/blog/assets/js/82.fce58955.js"><link rel="prefetch" href="/blog/assets/js/83.36cc12dd.js"><link rel="prefetch" href="/blog/assets/js/84.512f6776.js"><link rel="prefetch" href="/blog/assets/js/85.b32496e1.js"><link rel="prefetch" href="/blog/assets/js/86.f741c1ec.js"><link rel="prefetch" href="/blog/assets/js/87.29d27f1f.js"><link rel="prefetch" href="/blog/assets/js/88.3b0964ad.js"><link rel="prefetch" href="/blog/assets/js/89.12851ce5.js"><link rel="prefetch" href="/blog/assets/js/9.48986d07.js"><link rel="prefetch" href="/blog/assets/js/90.2f222f77.js"><link rel="prefetch" href="/blog/assets/js/91.edf5550b.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.4a9e7301.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">周小可</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/gcd/" class="nav-link">GCD</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/locks/" class="nav-link">iOS中的锁</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/performance-optimization/" class="nav-link">性能优化</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/responder/" class="nav-link">事件响应</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/image_decode/" class="nav-link">图片编解码</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/nshashtable-nsmaptable/" class="nav-link">NSHashTable 和 NSMapTable</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/dttext/" class="nav-link">图文混排与 DTCoreText</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/mvvm/" class="nav-link">MVVM 实战</a></li><li class="dropdown-item"><!----> <a href="https://github.com/hnxczk/InfiniteTree" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  InfiniteTree
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/hnxczk/ScrollViewAutoAdjust" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ScrollViewAutoAdjust
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="/blog/articles/instruments/" class="nav-link">Instruments 分析</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/note/" class="nav-link">笔记</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/mdn/" class="nav-link">MDN 学习笔记</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/02/" class="nav-link">JavaScript 类型</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/03/" class="nav-link">JavaScript 对象和原型链</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/05/" class="nav-link">JavaScript 执行上下文和执行栈</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/06/" class="nav-link">JavaScript 作用域链与闭包</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/head-first-design-pattern/" class="nav-link">Head First 设计模式</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/Graphic-Design-Patterns/" class="nav-link">图说设计模式</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-algorithm/" class="nav-link">极客时间-算法</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/" class="nav-link">极客时间-重学前端</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/network-study/" class="nav-link">极客时间-网络</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">源码解析</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/sd/" class="nav-link">SDWebImage</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/runtime/index/" class="nav-link">Runtime</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">算法</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/hash-map/" class="nav-link">哈希表</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/search/" class="nav-link">查找</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/algorithm-interview/" class="nav-link">面试遇到的算法</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">网络</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/networking/" class="nav-link">哈希表</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/http-https/" class="nav-link">HTTP与HTTPS</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">工程化</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/ios-coding-style/" class="nav-link">iOS 代码规范</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/ios-code-review/" class="nav-link">iOS 代码审核</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/configura/" class="nav-link">多环境配置</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/ios-app-on-line/" class="nav-link">开发者账号相关</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/uml/" class="nav-link">UML类图</a></li></ul></div></div> <a href="https://github.com/hnxczk/hnxczk.github.io.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/gcd/" class="nav-link">GCD</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/locks/" class="nav-link">iOS中的锁</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/performance-optimization/" class="nav-link">性能优化</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/responder/" class="nav-link">事件响应</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/image_decode/" class="nav-link">图片编解码</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/nshashtable-nsmaptable/" class="nav-link">NSHashTable 和 NSMapTable</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/dttext/" class="nav-link">图文混排与 DTCoreText</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/mvvm/" class="nav-link">MVVM 实战</a></li><li class="dropdown-item"><!----> <a href="https://github.com/hnxczk/InfiniteTree" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  InfiniteTree
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/hnxczk/ScrollViewAutoAdjust" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ScrollViewAutoAdjust
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="/blog/articles/instruments/" class="nav-link">Instruments 分析</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/note/" class="nav-link">笔记</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/mdn/" class="nav-link">MDN 学习笔记</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/02/" class="nav-link">JavaScript 类型</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/03/" class="nav-link">JavaScript 对象和原型链</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/05/" class="nav-link">JavaScript 执行上下文和执行栈</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/06/" class="nav-link">JavaScript 作用域链与闭包</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/head-first-design-pattern/" class="nav-link">Head First 设计模式</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/Graphic-Design-Patterns/" class="nav-link">图说设计模式</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-algorithm/" class="nav-link">极客时间-算法</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/" class="nav-link">极客时间-重学前端</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/network-study/" class="nav-link">极客时间-网络</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">源码解析</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/sd/" class="nav-link">SDWebImage</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/runtime/index/" class="nav-link">Runtime</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">算法</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/hash-map/" class="nav-link">哈希表</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/search/" class="nav-link">查找</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/algorithm-interview/" class="nav-link">面试遇到的算法</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">网络</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/networking/" class="nav-link">哈希表</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/http-https/" class="nav-link">HTTP与HTTPS</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">工程化</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/ios-coding-style/" class="nav-link">iOS 代码规范</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/ios-code-review/" class="nav-link">iOS 代码审核</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/configura/" class="nav-link">多环境配置</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/ios-app-on-line/" class="nav-link">开发者账号相关</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/uml/" class="nav-link">UML类图</a></li></ul></div></div> <a href="https://github.com/hnxczk/hnxczk.github.io.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>GCD</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/articles/gcd.html#一些概念" class="sidebar-link">一些概念</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/articles/gcd.html#进程" class="sidebar-link">进程</a></li><li class="sidebar-sub-header"><a href="/blog/articles/gcd.html#线程" class="sidebar-link">线程</a></li><li class="sidebar-sub-header"><a href="/blog/articles/gcd.html#多线程" class="sidebar-link">多线程</a></li><li class="sidebar-sub-header"><a href="/blog/articles/gcd.html#多线程的坏处" class="sidebar-link">多线程的坏处</a></li><li class="sidebar-sub-header"><a href="/blog/articles/gcd.html#并发、并行、串行" class="sidebar-link">并发、并行、串行</a></li><li class="sidebar-sub-header"><a href="/blog/articles/gcd.html#同步、异步" class="sidebar-link">同步、异步</a></li><li class="sidebar-sub-header"><a href="/blog/articles/gcd.html#队列、线程" class="sidebar-link">队列、线程</a></li></ul></li><li><a href="/blog/articles/gcd.html#gcd-2" class="sidebar-link">GCD</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/articles/gcd.html#队列" class="sidebar-link">队列</a></li><li class="sidebar-sub-header"><a href="/blog/articles/gcd.html#执行方式" class="sidebar-link">执行方式</a></li><li class="sidebar-sub-header"><a href="/blog/articles/gcd.html#线程的开辟" class="sidebar-link">线程的开辟</a></li><li class="sidebar-sub-header"><a href="/blog/articles/gcd.html#死锁" class="sidebar-link">死锁</a></li></ul></li><li><a href="/blog/articles/gcd.html#gcd-中的函数和对象" class="sidebar-link">GCD 中的函数和对象</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/articles/gcd.html#dispatch-group" class="sidebar-link">dispatch_group</a></li><li class="sidebar-sub-header"><a href="/blog/articles/gcd.html#dispatch-barrier" class="sidebar-link">dispatch_barrier</a></li><li class="sidebar-sub-header"><a href="/blog/articles/gcd.html#dispatch-semaphore" class="sidebar-link">dispatch_semaphore</a></li></ul></li><li><a href="/blog/articles/gcd.html#扩展" class="sidebar-link">扩展</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/articles/gcd.html#_1-完善代码" class="sidebar-link">1. 完善代码</a></li><li class="sidebar-sub-header"><a href="/blog/articles/gcd.html#异步转同步" class="sidebar-link">异步转同步</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="gcd"><a href="#gcd" aria-hidden="true" class="header-anchor">#</a> GCD</h1> <h2 id="一些概念"><a href="#一些概念" aria-hidden="true" class="header-anchor">#</a> 一些概念</h2> <h3 id="进程"><a href="#进程" aria-hidden="true" class="header-anchor">#</a> 进程</h3> <p>指的是一个正在运行中的可执行文件。每一个进程都拥有独立的虚拟内存空间和系统资源，包括端口权限等，且至少包含一个主线程和任意数量的辅助线程。另外，当一个进程的主线程退出时，这个进程就结束了。</p> <h3 id="线程"><a href="#线程" aria-hidden="true" class="header-anchor">#</a> 线程</h3> <blockquote><p>一个CPU执行的CPU命令列为一条无分叉路径即为线程</p></blockquote> <p>我们都知道我们写的OC/Swift源码最后会被编译器转换成相应的CPU命令列，然后程序启动后操作系统会将包含在程序中的CPU命令列配置到内存中。然后会从应用程序制定的地址开始一个一个的执行命令。虽然在遇到诸如if语句、for语句等控制语句或者函数调用的情况下，执行命令列会进行位置迁移。但是由于一个CPU一次只能处理一个指令，因此依然可以把CPU命令列看成一条无分叉的路径，其执行不会出现分叉。
+当这种无分叉的路径存在多条时就是“多线程”。</p> <h3 id="多线程"><a href="#多线程" aria-hidden="true" class="header-anchor">#</a> 多线程</h3> <p>虽然CPU相关的技术不断进步，但是基本上一个CPU核一次能执行的命令始终为1。这时候要在多条路径中执行CPU命令列就需要进行“上下文切换”。</p> <blockquote><p>将执行中的路径的状态，如CPU寄存器等信息保存到对应路径专用的内存块中，然后从将要切换到的目标路径对应的内存中复原CPU寄存器等信息，继续执行切换路径的CPU命令列。这就称为“上下文切换”。</p></blockquote> <p>来个比喻来说，比如CPU是个学生，他需要做英语和数学两种作业。但是我们让CPU写一会儿英语作业后写一会儿数学作业，然后再写一会儿英语作业。两种作业快速切换就给人一种CPU在同时在写英语和数学作业的感觉。</p> <h3 id="多线程的坏处"><a href="#多线程的坏处" aria-hidden="true" class="header-anchor">#</a> 多线程的坏处</h3> <p>一般我们都觉得多线程多好啊，几个线程一起执行任务，这样肯定会提高速度。但是从上面多线程的介绍来看并不是这样。（你要是让小明去一边写英语一边写数学，估计早就被打死了。。）当在不同的线程中来回切换的时候会不停地备份、替换寄存器等信息，这明显会耗费性能。那多线程的用处是什么呢？这就要涉及几个新的概念。</p> <h3 id="并发、并行、串行"><a href="#并发、并行、串行" aria-hidden="true" class="header-anchor">#</a> 并发、并行、串行</h3> <p><img src="/blog/assets/img/gcd_1.c6bffa99.jpg" alt="图片来自Erlang 之父 Joe Armstrong"></p> <p>Erlang 之父 Joe Armstrong 用一张图解释了并发与并行的区别。并发是两队交替使用一台咖啡机，并行则是两个队列同时使用两台咖啡机。串行则是一个队列使用一台咖啡机。（更详细的说明可以看看<a href="https://www.zhihu.com/question/33515481" target="_blank" rel="noopener noreferrer">知乎这些回答<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>）
+多线程就是采用了并行的技术来同时处理不同的指令。而在我们的程序中通过主线程来绘制界面，响应用户交互事件。如果在这个线程上进行长时间的处理，就会阻塞主线程的执行，妨碍主线程中Runloop的住循环，这样就不能及时更新界面，响应用户的交互，这就给用户卡顿的感觉。而使用多线程就能解决这个问题，给用户“快”的感觉。所以多线程所谓能提高速度指的就是这个意思。</p> <h3 id="同步、异步"><a href="#同步、异步" aria-hidden="true" class="header-anchor">#</a> 同步、异步</h3> <p>同步就是我们平常写的那些代码。它会一行接一行的执行，每一行都可以看成是一个任务，一个任务没执行完就不会执行下一个任务。异步就是允许执行一行的时候函数直接返回，真正要执行的任务稍后完成。
+对于同步执行的任务来说系统__倾向于__在同一个线程中执行。这是因为这个时候就算开了其他线程系统也要等他们在各自线程中全执行完成，这样以来又增加了线程切换时的性能，得不偿失。
+对于异步执行的任务来说系统__倾向于__在多个线程中执行，这样就可以更好的利用CPU性能，缩短完成任务的时间，提高效率。</p> <h3 id="队列、线程"><a href="#队列、线程" aria-hidden="true" class="header-anchor">#</a> 队列、线程</h3> <p>这两个概念经常被混淆，其实这两个是不同层级的概念。队列是为了方便使用和理解的抽象结构，线程则是系统级进行运算调度的单位。系统利用队列来进行任务调度，它会根据调度任务的需要和系统的负载等情况动态的创建和销毁线程。并行队列可能对应多个线程。串行队列则每次对应一个线程，这个线程可能不变，可能会被更换。</p> <h2 id="gcd-2"><a href="#gcd-2" aria-hidden="true" class="header-anchor">#</a> GCD</h2> <blockquote><p>Grand Central Dispatch是异步执行任务的技术之一。<strong>开发者要做的只是定义想要执行的任务并追加到适当的Queue中</strong>，GCD就能生成必要的线程并计划计划任务。</p></blockquote> <p>可以看出我们需要注意的两点就是Queue和添加任务到Queue，在GCD中对应的就是<code>dispatch_queue</code>（队列）和<code>dispatch_async</code>、<code>dispatch_sync</code>（ 执行方式）。</p> <h3 id="队列"><a href="#队列" aria-hidden="true" class="header-anchor">#</a> 队列</h3> <ul><li><p><strong>串行队列</strong>（Serial Dispatch Queue）遵循先进先出规则，每一个任务都会等待它上个任务处理完成后执行，因此每次只执行一个任务。主队列是一种特殊的串行队列。是在主线程中执行的队列。</p></li> <li><p><strong>并行队列</strong>（Concurrent Dispatch Queue）依然遵循先进先出，不过每个任务不会等其他任务处理结束后再执行，而是在其他任务开始执行后就开始执行，这样就实现的多个任务并行。</p></li></ul> <p>举个例子：现在有三个任务blk1，blk2，blk3。</p> <p>在串行队列里会先执行blk1，等blk1执行完之后执行blk2，然后等blk2结束后再执行blk3。</p> <p>在并行队列里会先执行blk1，不用等blk1的处理结束就开始执行blk2，这时候也不用等待blk1，blk2的执行结束直接执行blk3。</p> <div class="language- extra-class"><pre class="language-text"><code>// 串行队列的创建
+dispatch_queue_t serial = dispatch_queue_create(&quot;com.zhouke.serial&quot;, NULL);
+// 获取主队列（这是个串行队列）
+dispatch_queue_t mainSerial = dispatch_get_main_queue();
+
+// 创建并行队列
+dispatch_queue_t concurrentCreated = dispatch_queue_create(&quot;com.zhouke.concurrent&quot;, DISPATCH_QUEUE_CONCURRENT);
+// 获取默认优先级的并行队列
+dispatch_queue_t concurrentGet = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+
+</code></pre></div><h3 id="执行方式"><a href="#执行方式" aria-hidden="true" class="header-anchor">#</a> 执行方式</h3> <ul><li><strong>同步执行</strong>（<code>dispatch_sync</code>）这个函数就是把指定的block同步添加到指定的队列中，在这个block执行结束之前，函数会一直等待。（了解这个死锁就很容易理解了）</li> <li><strong>异步执行</strong>（<code>dispatch_sync</code>）这个函数会将指定的block非同步的添加到指定队列中，函数不做等待。</li></ul> <p>一般来说同步方法会在当前线程执行，异步方法会开启新的线程。但是对于主队列来说就有点特殊了。在主队列执行同步方法会产生死锁，执行异步方法不会开启新的线程，依然在主线程执行。</p> <h3 id="线程的开辟"><a href="#线程的开辟" aria-hidden="true" class="header-anchor">#</a> 线程的开辟</h3> <ul><li>(串行/并行)队列决定任务是否在当前线程(注意不是队列)执行。</li> <li>(同步/异步)任务决定任务立即执行(阻塞线程)还是添加到队列末尾(不阻塞线程)。</li></ul> <p>由上可知会开辟新线程的两种情况：</p> <ul><li>并行队列+异步任务 = 多条新线程</li> <li>串行队列+异步任务 = 一条新线程</li></ul> <p>其余的情况下都不会开辟线程。</p> <h3 id="死锁"><a href="#死锁" aria-hidden="true" class="header-anchor">#</a> 死锁</h3> <blockquote><p>如果向<strong>当前</strong>串行队列<strong>同步</strong>派发任务就会产生死锁</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    NSLog(@&quot;1.%@&quot;, [NSThread currentThread]);
+    dispatch_queue_t queue = dispatch_get_main_queue();
+    dispatch_sync(queue, ^{
+        NSLog(@&quot;2.%@&quot;, [NSThread currentThread]);
+    });
+}
+</code></pre></div><p>这段代码就会会造成死锁。我们可以把<code>dispatch_sync</code>这个函数当做一个任务A，block里包装的是另一个任务B。然后我们可以看到A处于主队列中，这时同步添加任务B到主队列中。任务A会等待B任务完成，但是由于当前主队列是串行队列，这个新增的B任务要等到A任务执行完才能执行，这样就造成了两个任务互相等待，导致死锁。</p> <div class="language- extra-class"><pre class="language-text"><code>- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    NSLog(@&quot;1.%@&quot;, [NSThread currentThread]);
+    dispatch_queue_t queue = dispatch_queue_create(&quot;com.xxx.xxx&quot;, NULL);
+    dispatch_sync(queue, ^{
+        NSLog(@&quot;2.%@&quot;, [NSThread currentThread]);
+    });
+}
+</code></pre></div><p>上面这段代码就不会照成死锁，这是因为<code>dispatch_sync</code>这个函数处于主队列中,但是block包装的任务处于queue这个串行队列中，两者在不同的串行队列，因此不会死锁。</p> <div class="language- extra-class"><pre class="language-text"><code>- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    NSLog(@&quot;1.%@&quot;, [NSThread currentThread]);
+    dispatch_queue_t queue = dispatch_queue_create(&quot;com.xxx.xxx&quot;, NULL);
+    dispatch_async(queue, ^{
+        NSLog(@&quot;2.%@&quot;, [NSThread currentThread]);
+        dispatch_sync(queue, ^{
+            NSLog(@&quot;3.%@&quot;, [NSThread currentThread]);
+        });
+    });
+}
+</code></pre></div><p>这段代码依然会死锁，原因跟第一段代码一样。<code>dispatch_async</code>函数可以看成是把block里的任务放到queue中执行，这时<code>dispatch_sync</code>处于queue这个队列中，它的block包装的任务依然处于queue队列中，因此会死锁。</p> <h2 id="gcd-中的函数和对象"><a href="#gcd-中的函数和对象" aria-hidden="true" class="header-anchor">#</a> GCD 中的函数和对象</h2> <h3 id="dispatch-group"><a href="#dispatch-group" aria-hidden="true" class="header-anchor">#</a> <code>dispatch_group</code></h3> <p>在串行队列中如果想在全部任务结束后再做些操作是很好处理的，但是对于并行队列就不一样了，这时候我们就需要使用 Dispatch Group.</p> <div class="language- extra-class"><pre class="language-text"><code>    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_group_t group = dispatch_group_create();
+    
+    dispatch_group_async(group, queue, ^{
+        NSLog(@&quot;任务1执行&quot;);
+    });
+    dispatch_group_async(group, queue, ^{
+        NSLog(@&quot;任务2执行&quot;);
+    });
+    dispatch_group_async(group, queue, ^{
+        NSLog(@&quot;任务3执行&quot;);
+    });
+    
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        NSLog(@&quot;全部执行完成&quot;);
+    });
+</code></pre></div><p>这段代码中全部执行完成这个任务就会在任务1、2、3全部执行后调用。</p> <p>还可以使用 <code>dispatch_group_enter</code> <code>dispatch_group_leave</code> 来实现相识的功能。与上面的区别就是不需要开新的线程</p> <div class="language- extra-class"><pre class="language-text"><code>dispatch_group_t group = dispatch_group_create();
+
+dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        NSLog(@&quot;全部执行完成&quot;);
+    });
+
+dispatch_group_enter(group);
+NSLog(@&quot;任务1执行&quot;);
+dispatch_group_leave(group);
+
+dispatch_group_enter(group);
+NSLog(@&quot;任务2执行&quot;);
+dispatch_group_leave(group);
+
+dispatch_group_enter(group);
+NSLog(@&quot;任务3执行&quot;);
+dispatch_group_leave(group);
+</code></pre></div><h3 id="dispatch-barrier"><a href="#dispatch-barrier" aria-hidden="true" class="header-anchor">#</a> <code>dispatch_barrier</code></h3> <p>当多个线程同时更新资源的时候会造成数据竞争，这时候我们需要使用 <code>dispatch_barrier</code>。</p> <p><code>dispatch_barrier_sync</code> <code>dispatch_barrier_async</code> 区别就是它的 block 里代码是否在当前线程执行，跟上面同步（<code>dispatch_sync</code>）异步(<code>dispatch_async</code>)执行方式的区别是一样的。</p> <p>比如我们经常会碰到的一个问题，atomic 修饰的属性一定是安全的吗？</p> <p>答案是否定的，atomic 只保证了针对这个属性的成员变量的读写的原子性，而如果一个线程在连续多次读取某属性值的过程中有别的线程在同时改写该值，那么即便将属性声明为 atomic，也还是会读到不正确的属性值。使用串行队列可以解决这个问题,将所有的读取写入操作都放到串行队列中，这样就能保证线程安全了。更好的更高性能的解决办法就是利用 <code>dispatch_barrier</code>。</p> <div class="language- extra-class"><pre class="language-text"><code>_queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+
+- (NSString *)name
+{
+    __block NSString *localString;
+    dispatch_sync(_queue, ^{
+        localString = _name;
+    });
+    return localString;
+}
+
+- (void)setName:(NSString *)name
+{
+    dispatch_barrier_async(_queue, ^{
+        _name = name;
+    });
+}
+</code></pre></div><p>当上面的执行时属性的读取操作并发执行，而写入操作必须单独执行。</p> <p><img src="/blog/assets/img/gcd_2.ff307100.png" alt=""></p> <p><strong>需要注意</strong>的是如果我们调用 <code>dispatch_barrier_async</code> 时提交到一个 global queue，barrier blocks 执行效果与 <code>dispatch_async()</code> 一致；只有将 Barrier blocks 提交到使用 <code>DISPATCH_QUEUE_CONCURRENT</code> 属性创建的并行 queue 时它才会表现的如同预期。</p> <h3 id="dispatch-semaphore"><a href="#dispatch-semaphore" aria-hidden="true" class="header-anchor">#</a> <code>dispatch_semaphore</code></h3> <p><code>dispatch_barrier</code> 能在任务这种粒度上来防止数据竞争，当我们需要更细粒度控制的时候就需要使用 <code>dispatch_semaphore</code>。</p> <blockquote><p>首先介绍一下信号量 ( semaphore ) 的概念。信号量是持有计数的信号，不过这么解释等于没解释。我们举个生活中的例子来看看。</p> <p>假设有一个房子，它对应进程的概念，房子里的人就对应着线程。一个进程可以包括多个线程。这个房子(进程)有很多资源，比如花园、客厅等，是所有人(线程)共享的。</p> <p>但是有些地方，比如卧室，最多只有两个人能进去睡觉。怎么办呢，在卧室门口挂上两把钥匙。进去的人(线程)拿着钥匙进去，没有钥匙就不能进去，出来的时候把钥匙放回门口。</p> <p>这时候，门口的钥匙数量就称为信号量( semaphore )。很明显，信号量为0时需要等待，信号量不为零时，减去1而且不等待。</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    /*
+     *  生成dispatch_semaphore，其初始值设置为1
+     *  保证访问array的线程在同一时间只有一个
+     */
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(1);
+    
+    NSMutableArray *array = [NSMutableArray array];
+    
+    for (int i = 0; i &lt; 1000; ++i) {
+        dispatch_async(queue, ^{
+            /*
+             某个线程执行到这里，如果信号量值为1，那么wait方法返回1，开始执行接下来的操作。
+             与此同时，因为信号量变为0，其它执行到这里的线程都必须等待  
+             */
+            dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+            /*
+             执行了wait方法后，信号量的值变成了0。可以进行接下来的操作。
+             这时候其它线程都得等待wait方法返回。
+             可以对array修改的线程在任意时刻都只有一个，可以安全的修改array
+             */
+            [array addObject:[NSNumber numberWithInt:i]];
+            /*
+             排他操作执行结束，记得要调用signal方法，把信号量的值加1。
+             这样，如果有别的线程在等待wait函数返回，就由最先等待的线程执行。
+             */
+            dispatch_semaphore_signal(semaphore);
+        });
+    }
+</code></pre></div><h4 id="具体使用的例子"><a href="#具体使用的例子" aria-hidden="true" class="header-anchor">#</a> 具体使用的例子</h4> <h5 id="_1-控制并发数"><a href="#_1-控制并发数" aria-hidden="true" class="header-anchor">#</a> 1. 控制并发数</h5> <div class="language- extra-class"><pre class="language-text"><code>// 创建队列组
+    dispatch_group_t group = dispatch_group_create();   
+// 创建信号量，并且设置值为10
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(10);   
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);   
+    for (int i = 0; i &lt; 100; i++)   
+    {   // 由于是异步执行的，所以每次循环Block里面的dispatch_semaphore_signal根本还没有执行就会执行dispatch_semaphore_wait，从而semaphore-1.当循环10此后，semaphore等于0，则会阻塞线程，直到执行了Block的dispatch_semaphore_signal 才会继续执行
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);   
+        dispatch_group_async(group, queue, ^{   
+            NSLog(@&quot;%i&quot;,i);   
+            sleep(2);   
+// 每次发送信号则semaphore会+1，
+            dispatch_semaphore_signal(semaphore);   
+        });   
+    }
+</code></pre></div><h5 id="_2-限制请求频次"><a href="#_2-限制请求频次" aria-hidden="true" class="header-anchor">#</a> 2. 限制请求频次</h5> <p>每次请求发出后由于信号量0则其他线程必须等待，只有等请求返回成功或者失败后信号量设为1，这时候才能继续其他的网络请求。</p> <p>需要注意死锁的问题。</p> <div class="language- extra-class"><pre class="language-text"><code>- (void)request1{
+    //创建信号量并设置计数默认为0
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    manager.completionQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);//关键的就是这句，如果是默认在主线程的回调就会造成死锁
+    NSString *url = [NSString stringWithFormat:@&quot;%s&quot;,&quot;http://v3.wufazhuce.com:8000/api/channel/movie/more/0?platform=ios&amp;version=v4.0.1&quot;];
+    [manager GET:url parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSArray *data = responseObject[@&quot;data&quot;];
+        for (NSDictionary *dic in data) {
+            NSLog(@&quot;请求1---%@&quot;,dic[@&quot;id&quot;]);
+        }
+        //计数加1
+        dispatch_semaphore_signal(semaphore);
+        //11380-- data.lastObject[@&quot;id&quot;];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@&quot;shibai...&quot;);
+        //计数加1
+        dispatch_semaphore_signal(semaphore);
+    }];
+    //若计数为0则一直等待
+    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+}
+</code></pre></div><h2 id="扩展"><a href="#扩展" aria-hidden="true" class="header-anchor">#</a> 扩展</h2> <h3 id="_1-完善代码"><a href="#_1-完善代码" aria-hidden="true" class="header-anchor">#</a> 1. 完善代码</h3> <p>完善下面的代码，使其能正确执行</p> <div class="language- extra-class"><pre class="language-text"><code>int foo(int i, int j) {
+    int sum = 0;
+    dispatch_async(queue, ^{
+        sum = i + j;
+    });
+    return sum;
+}
+</code></pre></div><h4 id="_1-使用同步操作"><a href="#_1-使用同步操作" aria-hidden="true" class="header-anchor">#</a> 1. 使用同步操作</h4> <p>串行并行队列都可以，但是注意不要使用当前队列</p> <div class="language- extra-class"><pre class="language-text"><code>int foo1(int i, int j) {
+    __block int sum = 0;
+    
+    dispatch_queue_t queue = dispatch_queue_create(&quot;com.zhouke&quot;, DISPATCH_QUEUE_CONCURRENT);
+    dispatch_sync(queue, ^{
+        sum = i + j;
+    });
+    
+    return sum;
+}
+</code></pre></div><h4 id="_2-使用-dispatch-group"><a href="#_2-使用-dispatch-group" aria-hidden="true" class="header-anchor">#</a> 2. 使用 <code>dispatch_group</code></h4> <div class="language- extra-class"><pre class="language-text"><code>int foo(int i, int j) {
+    __block int sum = 0;
+    dispatch_queue_t queue = dispatch_queue_create(&quot;com.zhouke&quot;, DISPATCH_QUEUE_SERIAL);
+    dispatch_group_t group = dispatch_group_create();
+    
+    dispatch_group_async(group, queue, ^{
+        sum = i + j;
+    });
+    dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
+
+    return sum;
+}
+</code></pre></div><h4 id="_3-使用-dispatch-barrier"><a href="#_3-使用-dispatch-barrier" aria-hidden="true" class="header-anchor">#</a> 3. 使用 <code>dispatch_barrier</code></h4> <p>本质上跟第一种是一样的。</p> <div class="language- extra-class"><pre class="language-text"><code>int foo(int i, int j) {
+    __block int sum = 0;
+    
+    dispatch_queue_t queue = dispatch_queue_create(&quot;com.zhouke&quot;, DISPATCH_QUEUE_CONCURRENT);
+    
+    dispatch_barrier_sync(queue, ^{
+        sum = i + j;
+    });
+    return sum;
+}
+</code></pre></div><h4 id="_4-使用信号量"><a href="#_4-使用信号量" aria-hidden="true" class="header-anchor">#</a> 4. 使用信号量</h4> <p>注意不要使用当前队列，否则依然会造成死锁。</p> <div class="language- extra-class"><pre class="language-text"><code>int foo(int i, int j) {
+    __block int sum = 0;
+    
+    dispatch_queue_t queue = dispatch_queue_create(&quot;com.zhouke&quot;, DISPATCH_QUEUE_CONCURRENT);
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    
+    dispatch_async(queue, ^{
+        sum = i + j;
+        dispatch_semaphore_signal(semaphore);
+    });
+    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+    
+    return sum;
+}
+</code></pre></div><h3 id="异步转同步"><a href="#异步转同步" aria-hidden="true" class="header-anchor">#</a> 异步转同步</h3> <h4 id="_1-利用-dispatch-barrier"><a href="#_1-利用-dispatch-barrier" aria-hidden="true" class="header-anchor">#</a> 1. 利用 <code>dispatch_barrier</code></h4> <div class="language- extra-class"><pre class="language-text"><code>    // 创建队列
+    dispatch_queue_t queue = dispatch_queue_create(&quot;task&quot;, DISPATCH_QUEUE_CONCURRENT);
+    // 添加任务
+    dispatch_async(queue, ^{
+        NSLog(@&quot;1===task===%@&quot;, [NSThread currentThread]);
+    });
+    dispatch_async(queue, ^{
+        NSLog(@&quot;2===task===%@&quot;, [NSThread currentThread]);
+    });
+    dispatch_async(queue, ^{
+        NSLog(@&quot;3===task===%@&quot;, [NSThread currentThread]);
+    });
+    // 与dispatch_barrier_async区别就是它的 block 里代码是否在当前线程执行
+    dispatch_barrier_sync(queue, ^{
+        NSLog(@&quot;===barrier==%@&quot;, [NSThread currentThread]);
+    });
+    dispatch_async(queue, ^{
+        NSLog(@&quot;4===task===%@&quot;, [NSThread currentThread]);
+    });
+    dispatch_async(queue, ^{
+        NSLog(@&quot;5===task===%@&quot;, [NSThread currentThread]);
+    });
+    dispatch_async(queue, ^{
+        NSLog(@&quot;6===task===%@&quot;, [NSThread currentThread]);
+    });
+</code></pre></div><p>会阻塞当前线程，不能在主线程用。</p> <h4 id="_2-使用-dispatch-group-2"><a href="#_2-使用-dispatch-group-2" aria-hidden="true" class="header-anchor">#</a> 2. 使用 <code>dispatch_group</code></h4> <div class="language- extra-class"><pre class="language-text"><code> dispatch_group_t group = dispatch_group_create();
+
+// 请求 1
+dispatch_group_enter(group);
+[RequestManager requestOnSucceeded:^(id result) {
+        NSLog(@&quot;请求 1 完成&quot;);
+        dispatch_group_leave(group);
+    } onError:^(NSInteger code, NSString *message) {
+        NSLog(@&quot;请求 1 失败&quot;);
+        dispatch_group_leave(group);
+    }];
+
+// 请求 2
+dispatch_group_enter(group);
+[RequestManager requestOnSucceeded:^(id result) {
+        NSLog(@&quot;请求 2 完成&quot;);
+        dispatch_group_leave(group);
+    } onError:^(NSInteger code, NSString *message) {
+        NSLog(@&quot;请求 2 失败&quot;);
+        dispatch_group_leave(group);
+    }];
+
+dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+       NSLog(@&quot;全部任务完成==%@&quot;, [NSThread currentThread]);
+    });
+</code></pre></div><h4 id="_3-使用信号量"><a href="#_3-使用信号量" aria-hidden="true" class="header-anchor">#</a> 3. 使用信号量</h4> <div class="language- extra-class"><pre class="language-text"><code>    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    
+    dispatch_queue_t queue = dispatch_queue_create(&quot;task&quot;, DISPATCH_QUEUE_CONCURRENT);
+    dispatch_async(queue, ^{
+        NSLog(@&quot;1===task===%@&quot;, [NSThread currentThread]);
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), queue, ^{
+            dispatch_semaphore_signal(semaphore);
+        });
+    });
+    
+    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+    dispatch_async(queue, ^{
+        NSLog(@&quot;2===task===%@&quot;, [NSThread currentThread]);
+    });
+</code></pre></div><p>由于 AFN 等第三方网络请求框架的成功失败回调都是在主线程，因此需要特别注意死锁的问题。</p> <h1 id="参考资料"><a href="#参考资料" aria-hidden="true" class="header-anchor">#</a> 参考资料</h1> <ul><li>Objective-C高级编程 iOS与OS X多线程和内存管理》</li> <li>《Effective Objective-C 2.0  编写高质量iOS与OS X代码的52个有效方法》</li> <li><a href="https://bestswifter.com/multithreadconclusion/#" target="_blank" rel="noopener noreferrer">iOS多线程编程总结 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://www.jianshu.com/p/96b93aa05bcd" target="_blank" rel="noopener noreferrer">iOS基础深入补完计划--GCD<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://www.cnblogs.com/buerjj/p/8041676.html" target="_blank" rel="noopener noreferrer">ios GCD将异步转换为同步<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">7/24/2019, 1:27:08 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.a54d2909.js" defer></script><script src="/blog/assets/js/2.fd76eafa.js" defer></script><script src="/blog/assets/js/26.532cd082.js" defer></script>
+  </body>
+</html>

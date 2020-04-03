@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>工厂模式 | 周小可</title>
+    <meta name="description" content="实践不仅是检验真理的标准，而且是唯一的标准。">
+    
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.4a9e7301.css" as="style"><link rel="preload" href="/blog/assets/js/app.a54d2909.js" as="script"><link rel="preload" href="/blog/assets/js/2.fd76eafa.js" as="script"><link rel="preload" href="/blog/assets/js/11.a771847c.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.15308436.js"><link rel="prefetch" href="/blog/assets/js/12.feaf4627.js"><link rel="prefetch" href="/blog/assets/js/13.e37a4c0b.js"><link rel="prefetch" href="/blog/assets/js/14.de6f1bc3.js"><link rel="prefetch" href="/blog/assets/js/15.4427f88c.js"><link rel="prefetch" href="/blog/assets/js/16.9d3218d0.js"><link rel="prefetch" href="/blog/assets/js/17.d9d07dad.js"><link rel="prefetch" href="/blog/assets/js/18.c4b7480b.js"><link rel="prefetch" href="/blog/assets/js/19.4f9f264a.js"><link rel="prefetch" href="/blog/assets/js/20.06a48f5c.js"><link rel="prefetch" href="/blog/assets/js/21.4257293a.js"><link rel="prefetch" href="/blog/assets/js/22.85e5ef53.js"><link rel="prefetch" href="/blog/assets/js/23.0dfc6d99.js"><link rel="prefetch" href="/blog/assets/js/24.a433853c.js"><link rel="prefetch" href="/blog/assets/js/25.97f2b81e.js"><link rel="prefetch" href="/blog/assets/js/26.532cd082.js"><link rel="prefetch" href="/blog/assets/js/27.96db6f2e.js"><link rel="prefetch" href="/blog/assets/js/28.a1f6a8bc.js"><link rel="prefetch" href="/blog/assets/js/29.b2c2bd91.js"><link rel="prefetch" href="/blog/assets/js/3.98209718.js"><link rel="prefetch" href="/blog/assets/js/30.4ab75552.js"><link rel="prefetch" href="/blog/assets/js/31.a263582b.js"><link rel="prefetch" href="/blog/assets/js/32.434785d8.js"><link rel="prefetch" href="/blog/assets/js/33.73f26596.js"><link rel="prefetch" href="/blog/assets/js/34.c4fb3767.js"><link rel="prefetch" href="/blog/assets/js/35.e8ff9422.js"><link rel="prefetch" href="/blog/assets/js/36.0252fde3.js"><link rel="prefetch" href="/blog/assets/js/37.1e89f062.js"><link rel="prefetch" href="/blog/assets/js/38.d84daf6a.js"><link rel="prefetch" href="/blog/assets/js/39.9bf7e592.js"><link rel="prefetch" href="/blog/assets/js/4.068bd1c5.js"><link rel="prefetch" href="/blog/assets/js/40.9d39ea55.js"><link rel="prefetch" href="/blog/assets/js/41.42a663a1.js"><link rel="prefetch" href="/blog/assets/js/42.3a751d2f.js"><link rel="prefetch" href="/blog/assets/js/43.3a335356.js"><link rel="prefetch" href="/blog/assets/js/44.7d01f77e.js"><link rel="prefetch" href="/blog/assets/js/45.94380ee0.js"><link rel="prefetch" href="/blog/assets/js/46.c3daaae4.js"><link rel="prefetch" href="/blog/assets/js/47.0ef93bcd.js"><link rel="prefetch" href="/blog/assets/js/48.5b1a24b8.js"><link rel="prefetch" href="/blog/assets/js/49.c39c7fef.js"><link rel="prefetch" href="/blog/assets/js/5.bb18b958.js"><link rel="prefetch" href="/blog/assets/js/50.43f38f52.js"><link rel="prefetch" href="/blog/assets/js/51.fb3a6504.js"><link rel="prefetch" href="/blog/assets/js/52.d09c3b70.js"><link rel="prefetch" href="/blog/assets/js/53.06f6490b.js"><link rel="prefetch" href="/blog/assets/js/54.437f5d1a.js"><link rel="prefetch" href="/blog/assets/js/55.eb0681e9.js"><link rel="prefetch" href="/blog/assets/js/56.089548ed.js"><link rel="prefetch" href="/blog/assets/js/57.d545c4fe.js"><link rel="prefetch" href="/blog/assets/js/58.70be975f.js"><link rel="prefetch" href="/blog/assets/js/59.eebe4e88.js"><link rel="prefetch" href="/blog/assets/js/6.4d3dd8e5.js"><link rel="prefetch" href="/blog/assets/js/60.91b3ed77.js"><link rel="prefetch" href="/blog/assets/js/61.71e6c721.js"><link rel="prefetch" href="/blog/assets/js/62.28e384bf.js"><link rel="prefetch" href="/blog/assets/js/63.6646438b.js"><link rel="prefetch" href="/blog/assets/js/64.302d43d4.js"><link rel="prefetch" href="/blog/assets/js/65.271d4d28.js"><link rel="prefetch" href="/blog/assets/js/66.90a8840e.js"><link rel="prefetch" href="/blog/assets/js/67.1ad437d0.js"><link rel="prefetch" href="/blog/assets/js/68.90855765.js"><link rel="prefetch" href="/blog/assets/js/69.f6f5adc6.js"><link rel="prefetch" href="/blog/assets/js/7.481a6611.js"><link rel="prefetch" href="/blog/assets/js/70.3853662a.js"><link rel="prefetch" href="/blog/assets/js/71.98d8eeee.js"><link rel="prefetch" href="/blog/assets/js/72.fff2c9b2.js"><link rel="prefetch" href="/blog/assets/js/73.3d888aa9.js"><link rel="prefetch" href="/blog/assets/js/74.f4c59cfe.js"><link rel="prefetch" href="/blog/assets/js/75.39a7ef7e.js"><link rel="prefetch" href="/blog/assets/js/76.9faa10ae.js"><link rel="prefetch" href="/blog/assets/js/77.ac1b1239.js"><link rel="prefetch" href="/blog/assets/js/78.614fab51.js"><link rel="prefetch" href="/blog/assets/js/79.91b89113.js"><link rel="prefetch" href="/blog/assets/js/8.a7cdda78.js"><link rel="prefetch" href="/blog/assets/js/80.aaa67e21.js"><link rel="prefetch" href="/blog/assets/js/81.1e302fb8.js"><link rel="prefetch" href="/blog/assets/js/82.fce58955.js"><link rel="prefetch" href="/blog/assets/js/83.36cc12dd.js"><link rel="prefetch" href="/blog/assets/js/84.512f6776.js"><link rel="prefetch" href="/blog/assets/js/85.b32496e1.js"><link rel="prefetch" href="/blog/assets/js/86.f741c1ec.js"><link rel="prefetch" href="/blog/assets/js/87.29d27f1f.js"><link rel="prefetch" href="/blog/assets/js/88.3b0964ad.js"><link rel="prefetch" href="/blog/assets/js/89.12851ce5.js"><link rel="prefetch" href="/blog/assets/js/9.48986d07.js"><link rel="prefetch" href="/blog/assets/js/90.2f222f77.js"><link rel="prefetch" href="/blog/assets/js/91.edf5550b.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.4a9e7301.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">周小可</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/gcd/" class="nav-link">GCD</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/locks/" class="nav-link">iOS中的锁</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/performance-optimization/" class="nav-link">性能优化</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/responder/" class="nav-link">事件响应</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/image_decode/" class="nav-link">图片编解码</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/nshashtable-nsmaptable/" class="nav-link">NSHashTable 和 NSMapTable</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/dttext/" class="nav-link">图文混排与 DTCoreText</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/mvvm/" class="nav-link">MVVM 实战</a></li><li class="dropdown-item"><!----> <a href="https://github.com/hnxczk/InfiniteTree" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  InfiniteTree
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/hnxczk/ScrollViewAutoAdjust" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ScrollViewAutoAdjust
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="/blog/articles/instruments/" class="nav-link">Instruments 分析</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/note/" class="nav-link">笔记</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/mdn/" class="nav-link">MDN 学习笔记</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/02/" class="nav-link">JavaScript 类型</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/03/" class="nav-link">JavaScript 对象和原型链</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/05/" class="nav-link">JavaScript 执行上下文和执行栈</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/06/" class="nav-link">JavaScript 作用域链与闭包</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/head-first-design-pattern/" class="nav-link router-link-active">Head First 设计模式</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/Graphic-Design-Patterns/" class="nav-link">图说设计模式</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-algorithm/" class="nav-link">极客时间-算法</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/" class="nav-link">极客时间-重学前端</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/network-study/" class="nav-link">极客时间-网络</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">源码解析</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/sd/" class="nav-link">SDWebImage</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/runtime/index/" class="nav-link">Runtime</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">算法</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/hash-map/" class="nav-link">哈希表</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/search/" class="nav-link">查找</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/algorithm-interview/" class="nav-link">面试遇到的算法</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">网络</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/networking/" class="nav-link">哈希表</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/http-https/" class="nav-link">HTTP与HTTPS</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">工程化</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/ios-coding-style/" class="nav-link">iOS 代码规范</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/ios-code-review/" class="nav-link">iOS 代码审核</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/configura/" class="nav-link">多环境配置</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/ios-app-on-line/" class="nav-link">开发者账号相关</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/uml/" class="nav-link">UML类图</a></li></ul></div></div> <a href="https://github.com/hnxczk/hnxczk.github.io.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/gcd/" class="nav-link">GCD</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/locks/" class="nav-link">iOS中的锁</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/performance-optimization/" class="nav-link">性能优化</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/responder/" class="nav-link">事件响应</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/image_decode/" class="nav-link">图片编解码</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/nshashtable-nsmaptable/" class="nav-link">NSHashTable 和 NSMapTable</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/dttext/" class="nav-link">图文混排与 DTCoreText</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/mvvm/" class="nav-link">MVVM 实战</a></li><li class="dropdown-item"><!----> <a href="https://github.com/hnxczk/InfiniteTree" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  InfiniteTree
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/hnxczk/ScrollViewAutoAdjust" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ScrollViewAutoAdjust
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="/blog/articles/instruments/" class="nav-link">Instruments 分析</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/note/" class="nav-link">笔记</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/mdn/" class="nav-link">MDN 学习笔记</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/02/" class="nav-link">JavaScript 类型</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/03/" class="nav-link">JavaScript 对象和原型链</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/05/" class="nav-link">JavaScript 执行上下文和执行栈</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/06/" class="nav-link">JavaScript 作用域链与闭包</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/head-first-design-pattern/" class="nav-link router-link-active">Head First 设计模式</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/Graphic-Design-Patterns/" class="nav-link">图说设计模式</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-algorithm/" class="nav-link">极客时间-算法</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/" class="nav-link">极客时间-重学前端</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/network-study/" class="nav-link">极客时间-网络</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">源码解析</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/sd/" class="nav-link">SDWebImage</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/runtime/index/" class="nav-link">Runtime</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">算法</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/hash-map/" class="nav-link">哈希表</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/search/" class="nav-link">查找</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/algorithm-interview/" class="nav-link">面试遇到的算法</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">网络</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/networking/" class="nav-link">哈希表</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/http-https/" class="nav-link">HTTP与HTTPS</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">工程化</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/ios-coding-style/" class="nav-link">iOS 代码规范</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/ios-code-review/" class="nav-link">iOS 代码审核</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/configura/" class="nav-link">多环境配置</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/ios-app-on-line/" class="nav-link">开发者账号相关</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/uml/" class="nav-link">UML类图</a></li></ul></div></div> <a href="https://github.com/hnxczk/hnxczk.github.io.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>工厂模式</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/articles/reading-notes/head-first-design-pattern/04-factory-pattern.html#披萨店的问题" class="sidebar-link">披萨店的问题</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/articles/reading-notes/head-first-design-pattern/04-factory-pattern.html#静态工厂" class="sidebar-link">静态工厂</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/articles/reading-notes/head-first-design-pattern/04-factory-pattern.html#定义简单工厂" class="sidebar-link">定义简单工厂</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/articles/reading-notes/head-first-design-pattern/04-factory-pattern.html#工厂方法模式" class="sidebar-link">工厂方法模式</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/articles/reading-notes/head-first-design-pattern/04-factory-pattern.html#定义工厂方法模式" class="sidebar-link">定义工厂方法模式</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/articles/reading-notes/head-first-design-pattern/04-factory-pattern.html#简单工厂和工厂方法之间的差别" class="sidebar-link">简单工厂和工厂方法之间的差别</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/articles/reading-notes/head-first-design-pattern/04-factory-pattern.html#一个依赖很深的披萨店" class="sidebar-link">一个依赖很深的披萨店</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/articles/reading-notes/head-first-design-pattern/04-factory-pattern.html#实现倒置的指导方针" class="sidebar-link">实现倒置的指导方针</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/articles/reading-notes/head-first-design-pattern/04-factory-pattern.html#抽象工厂" class="sidebar-link">抽象工厂</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/articles/reading-notes/head-first-design-pattern/04-factory-pattern.html#定义抽象工厂模式" class="sidebar-link">定义抽象工厂模式</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/articles/reading-notes/head-first-design-pattern/04-factory-pattern.html#工厂方法与抽象工厂" class="sidebar-link">工厂方法与抽象工厂</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="工厂模式"><a href="#工厂模式" aria-hidden="true" class="header-anchor">#</a> 工厂模式</h1> <h2 id="披萨店的问题"><a href="#披萨店的问题" aria-hidden="true" class="header-anchor">#</a> 披萨店的问题</h2> <p>当披萨店生产不同的披萨的时候需要根据类型来进行生产，因此下面的代码就自然而然的出现了。</p> <div class="language- extra-class"><pre class="language-text"><code>-  (Pizza*)orderPizzaByType:(NSString *)type
+{
+    Pizza *pizza;
+    if ([type isEqualToString:@&quot;cheese&quot;]) {
+        pizza = [[CheesePizza alloc] init];
+    } else if ([type isEqualToString:@&quot;greek&quot;]) {
+        pizza = [[GreekPizza alloc] init];
+    } else if ([type isEqualToString:@&quot;pepperoni&quot;]) {
+        pizza = [[PepperoniPizza alloc] init];
+    }
+    
+    [pizza prepare];
+    [pizza bake];
+    [pizza cut];
+    [pizza box];
+
+    return pizza;
+}
+</code></pre></div><p>当披萨店增加或者删除某种类型的披萨的时候就不可避免的需要修改此处代码。这显然不符合开放封闭的设计原则。</p> <h2 id="静态工厂"><a href="#静态工厂" aria-hidden="true" class="header-anchor">#</a> 静态工厂</h2> <div class="language- extra-class"><pre class="language-text"><code>@implementation SimplePizzaFactory
+
++ (Pizza *)createPizzaByType:(NSString *)type
+{
+    Pizza *pizza = nil;
+    if ([type isEqualToString:@&quot;cheese&quot;]) {
+        pizza = [[CheesePizza alloc] init];
+    } else if ([type isEqualToString:@&quot;greek&quot;]) {
+        pizza = [[GreekPizza alloc] init];
+    } else if ([type isEqualToString:@&quot;pepperoni&quot;]) {
+        pizza = [[PepperoniPizza alloc] init];
+    }
+    
+    return pizza;
+}
+
+@end
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>Pizza *pizza = [SimplePizzaFactory createPizzaByType:@&quot;cheese&quot;];
+        
+[pizza prepare];
+[pizza bake];
+[pizza cut];
+[pizza box];
+</code></pre></div><p>通过 SimplePizzaFactory 类的类方法来创建 Pizza。这样就把生产 Pizza 的方法封装了起来，其他地方只需要用这个方法就能创建。修改的时候也只用修改者一处。</p> <p>缺点：无法通过继承来改变创建方法的行为。</p> <h2 id="定义简单工厂"><a href="#定义简单工厂" aria-hidden="true" class="header-anchor">#</a> 定义简单工厂</h2> <p><img src="/blog/assets/img/04-factory-pattern-1.25301f2c.png" alt=""></p> <p>代码在<a href="./code/04-factory-pattern/01-Pizza">这里</a></p> <p><strong>注意：在设计模式中，所谓的“实现一个接口”并“不一定”表示“写一个类，并让其来实现某个接口协议”。“实现一个接口”泛指“实现某个超级类型(可以是类或接口协议)的某个方法</strong></p> <h2 id="工厂方法模式"><a href="#工厂方法模式" aria-hidden="true" class="header-anchor">#</a> 工厂方法模式</h2> <p>所有工厂模式都是用来封装对象的创建。工厂方法模式通过让子类决定改创建的对象是什么，来达到将对象创建的过程封装的目的。</p> <p>在简单工厂中我们是由一个具体的类 SimplePizzaFactory 来负责所有具体类的实力化，接下来我们对 PizzaStore 做一些改变。</p> <div class="language- extra-class"><pre class="language-text"><code>@implementation PizzaStore
+
+- (instancetype)init
+{
+    NSAssert(![self isMemberOfClass:[PizzaStore class]], @&quot;AbstractDownloader is an abstract class, you should not instantiate it directly.&quot;);
+    return [super init];
+}
+
+- (Pizza *)orderPizzaByType:(NSString *)type
+{
+    Pizza *pizza = [self createPizzaByType:type];
+    
+    [pizza prepare];
+    [pizza bake];
+    [pizza cut];
+    [pizza box];
+    
+    return pizza;
+}
+
+// 实例化披萨的任务被放到一个方法中，并且它是抽象的
+// 1. 因为该方法是抽象的因此需要依赖子类对象来处理
+// 2. 工厂方法将 orderPizzaByType 与实际创建具体产品的子类对象的创建代码解耦了。
+- (Pizza *)createPizzaByType:(NSString *)type
+{
+    AbstractMethodNotImplemented();
+}
+
+@end
+</code></pre></div><p>经过修改 PizzaStore 成为了抽象类，由其子类 <code>NYPizzaStore</code> <code>ChicagoPizzaStore</code> 负责实例化。
+在子类中重写 createPizzaByType 这一工厂方法，这样一来就能通过子类来决定改创建哪种披萨对象。</p> <p>代码在<a href="./code/04-factory-pattern/02-Pizza">这里</a></p> <p>类图
+<img src="/blog/assets/img/04-factory-pattern-3.613c9e68.png" alt=""></p> <h2 id="定义工厂方法模式"><a href="#定义工厂方法模式" aria-hidden="true" class="header-anchor">#</a> 定义工厂方法模式</h2> <p><strong>工厂方法模式定义了一个创建对象的接口，但由子类决定要实例化的类是哪一个。工厂方法让类把实例化推迟到子类</strong></p> <p><img src="/blog/assets/img/04-factory-pattern-4.437cda6b.png" alt=""></p> <h2 id="简单工厂和工厂方法之间的差别"><a href="#简单工厂和工厂方法之间的差别" aria-hidden="true" class="header-anchor">#</a> 简单工厂和工厂方法之间的差别</h2> <p>简单工厂吧所有的事情都放在一个地方处理完，而工厂方法则是创建一个框架，让子类决定如何实现。比如在工厂方法中，orderPizza 方法提供了一般的框架来创建披萨，它依赖于工厂方法创建具体类，而工厂方法是个抽象方法，它由子类来决定到底创建那个具体的披萨。相较而言简单工厂并没有工厂方法模式的弹性。</p> <h2 id="一个依赖很深的披萨店"><a href="#一个依赖很深的披萨店" aria-hidden="true" class="header-anchor">#</a> 一个依赖很深的披萨店</h2> <p>当我们完全不用工厂模式的时候会出现如下图所示的严重依赖问题。这显然不是什么好事。</p> <p><img src="/blog/assets/img/04-factory-pattern-5.8fc27088.png" alt=""></p> <blockquote><p><strong>依赖倒置原则：要依赖抽象，不要依赖具体类</strong>
+不能让高层的组件依赖低层组件，而且不管高层低层他们都应该依赖于抽象。</p></blockquote> <p>这里所谓的高层的组件意思就是其行为由其他低层组件来定义。比如上图中 PizzaStore 的行为就依赖于 Pizza 的对象。这显然是不符合依赖倒置原则的。</p> <p>使用工厂方法之后的依赖关系
+<img src="/blog/assets/img/04-factory-pattern-6.59360e16.png" alt=""></p> <p>可以看出高层组件（PizzaStore）和低层组件（各种披萨）都依赖于 Pizza 这个抽象类。相较于第一张图高层组件的依赖明显倒置了。</p> <h2 id="实现倒置的指导方针"><a href="#实现倒置的指导方针" aria-hidden="true" class="header-anchor">#</a> 实现倒置的指导方针</h2> <ol><li>变量不可能持有具体类的引用。
+如果使用 new 就会持有具体的类的引用，这是需要使用工厂方法来处理。</li> <li>不要让类派生自具体类。
+如果派生自具体类，你就会依赖具体类。因此请派送自一个抽象（接口或者抽象类）。</li> <li>不要覆盖基类中已实现的方法。
+如果覆盖基类已经实现的方法，你的基类就不是一个合适被继承的抽象。基类中已经实现的类应该由所有子类共享。</li></ol> <p>当然，并不是强制要求所有的设计都符合以上原则，需要具体分析。。</p> <h2 id="抽象工厂"><a href="#抽象工厂" aria-hidden="true" class="header-anchor">#</a> 抽象工厂</h2> <p>需求： 我们要建造一个工厂来生产原料，这个工厂负责创建原料家族中的个种原料。每个地区都有各自的原料加工厂。</p> <ol><li>首先抽象出来一个原料工厂的接口.</li></ol> <div class="language- extra-class"><pre class="language-text"><code>@protocol PizzaIngredientFactory &lt;NSObject&gt;
+
+- (Dough *)createDough;
+- (Sauce *)createSauce;
+
+@end
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>@interface NYPizzaIngredientFactory : NSObject&lt;PizzaIngredientFactory&gt;
+
+@end
+
+@implementation NYPizzaIngredientFactory
+
+- (Dough *)createDough
+{
+    return [[ThinCrustDough alloc] init];
+}
+
+- (Sauce *)createSauce
+{
+    return [[MarinaraSauce alloc] init];
+}
+@end
+</code></pre></div><ol start="2"><li>为每个区域建造一个工厂，你需要创建一个实现 PizzaIngredientFactory 的接口的类来实现每一个创建方法。</li> <li>实现一组原料类供工厂使用，例如 ReggianoCheese，RedPeppers,ThickCrustDough.这些类可以在何时的区域间共享。</li> <li>然后你仍然需要将这一切组织起来，将新的原料工厂整合进旧的PizzaStore代码中。</li></ol> <p>修改 Pizza, 主要修改 Prepare 方法，使其成为一个抽象方法，交给子类去实现。</p> <div class="language- extra-class"><pre class="language-text"><code>@implementation Pizza
+
+- (instancetype)init
+{
+    NSAssert(![self isMemberOfClass:[Pizza class]], @&quot;AbstractDownloader is an abstract class, you should not instantiate it directly.&quot;);
+    return [super init];
+}
+
+- (void)prepare
+{
+    AbstractMethodNotImplemented();
+}
+
+- (void)bake
+{
+    NSLog(@&quot;Bake for 25 minutes at 350&quot;);
+}
+- (void)cut
+{
+    NSLog(@&quot;Cutting the pizza into diagonal slices&quot;);
+}
+
+- (void)box
+{
+    NSLog(@&quot;Place pizza in official PizzaStore box&quot;);
+}
+
+- (NSString *)getName
+{
+    return self.name;
+}
+
+- (NSMutableArray&lt;NSString *&gt; *)toppings
+{
+    if (!_toppings) {
+        _toppings = [NSMutableArray array];
+    }
+    return _toppings;
+}
+</code></pre></div><p>实现子类 , 主要添加一个原料工厂，并重写了 prepare 方法。</p> <div class="language- extra-class"><pre class="language-text"><code>@interface CheesePizza : Pizza
+
+@property (nonatomic, strong) id&lt;PizzaIngredientFactory&gt; ingredientFactory;
+
+- (instancetype)initWithIngredientFactory:(id&lt;PizzaIngredientFactory&gt;) ingredientFactory;
+
+@end
+
+@implementation CheesePizza
+
+- (instancetype)initWithIngredientFactory:(id&lt;PizzaIngredientFactory&gt;) ingredientFactory
+{
+    if (self = [super init]) {
+        self.ingredientFactory = ingredientFactory;
+    }
+    return self;
+}
+
+- (void)prepare
+{
+    NSLog(@&quot;Preparing %@&quot;, self.name);
+    self.dough = [self.ingredientFactory createDough];
+    self.sauce = [self.ingredientFactory createSauce];
+}
+
+@end
+</code></pre></div><p>修改披萨店的代码</p> <div class="language- extra-class"><pre class="language-text"><code>- (Pizza *)createPizzaByType:(NSString *)type
+{
+    NYPizzaIngredientFactory *ingreditenFactory = [[NYPizzaIngredientFactory alloc] init];
+    Pizza *pizza = nil;
+    if ([type isEqualToString:@&quot;cheese&quot;]) {
+        pizza = [[CheesePizza alloc] initWithIngredientFactory:ingreditenFactory];
+    } else if ([type isEqualToString:@&quot;clam&quot;]) {
+        pizza = [[ClamPizza alloc] initWithIngredientFactory:ingreditenFactory];
+    }
+    return pizza;
+}
+</code></pre></div><p>通过上面的代码我们引入新类型的工厂，也就是所谓的抽象工厂，来创建披萨原料家族。
+通过抽象工厂所提供的接口可以创建产品的家族，利用这个接口书写代码，我们的代码将从实际工厂解耦，以便在不同上下文中实现各式各样的工厂，制造出各种不同的产品。</p> <p>类图</p> <p><img src="/blog/assets/img/04-factory-pattern-7.074b2e66.png" alt=""></p> <h2 id="定义抽象工厂模式"><a href="#定义抽象工厂模式" aria-hidden="true" class="header-anchor">#</a> 定义抽象工厂模式</h2> <p><strong>抽象工厂模式提供一个接口，用于创建相关或依赖对象的家族，而不需要明确指定具体类。</strong></p> <p>工厂方法其实就是潜伏在抽象工厂里面。因为抽象工厂的任务就是定义一个负责创建一组产品的接口。这个接口内的每个方法都是负责创建一个具体的产品。同时我们在实现抽象工厂的子类中提供具体的做法。因此在抽象工厂里面利用工厂方法是很自然的。</p> <h2 id="工厂方法与抽象工厂"><a href="#工厂方法与抽象工厂" aria-hidden="true" class="header-anchor">#</a> 工厂方法与抽象工厂</h2> <p><img src="/blog/assets/img/04-factory-pattern-8.e17fbee4.png" alt=""></p> <p><img src="/blog/assets/img/04-factory-pattern-9.213524c2.png" alt=""></p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">7/24/2019, 1:27:08 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.a54d2909.js" defer></script><script src="/blog/assets/js/2.fd76eafa.js" defer></script><script src="/blog/assets/js/11.a771847c.js" defer></script>
+  </body>
+</html>

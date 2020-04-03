@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>排序 | 周小可</title>
+    <meta name="description" content="实践不仅是检验真理的标准，而且是唯一的标准。">
+    
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.4a9e7301.css" as="style"><link rel="preload" href="/blog/assets/js/app.a54d2909.js" as="script"><link rel="preload" href="/blog/assets/js/2.fd76eafa.js" as="script"><link rel="preload" href="/blog/assets/js/69.f6f5adc6.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.15308436.js"><link rel="prefetch" href="/blog/assets/js/11.a771847c.js"><link rel="prefetch" href="/blog/assets/js/12.feaf4627.js"><link rel="prefetch" href="/blog/assets/js/13.e37a4c0b.js"><link rel="prefetch" href="/blog/assets/js/14.de6f1bc3.js"><link rel="prefetch" href="/blog/assets/js/15.4427f88c.js"><link rel="prefetch" href="/blog/assets/js/16.9d3218d0.js"><link rel="prefetch" href="/blog/assets/js/17.d9d07dad.js"><link rel="prefetch" href="/blog/assets/js/18.c4b7480b.js"><link rel="prefetch" href="/blog/assets/js/19.4f9f264a.js"><link rel="prefetch" href="/blog/assets/js/20.06a48f5c.js"><link rel="prefetch" href="/blog/assets/js/21.4257293a.js"><link rel="prefetch" href="/blog/assets/js/22.85e5ef53.js"><link rel="prefetch" href="/blog/assets/js/23.0dfc6d99.js"><link rel="prefetch" href="/blog/assets/js/24.a433853c.js"><link rel="prefetch" href="/blog/assets/js/25.97f2b81e.js"><link rel="prefetch" href="/blog/assets/js/26.532cd082.js"><link rel="prefetch" href="/blog/assets/js/27.96db6f2e.js"><link rel="prefetch" href="/blog/assets/js/28.a1f6a8bc.js"><link rel="prefetch" href="/blog/assets/js/29.b2c2bd91.js"><link rel="prefetch" href="/blog/assets/js/3.98209718.js"><link rel="prefetch" href="/blog/assets/js/30.4ab75552.js"><link rel="prefetch" href="/blog/assets/js/31.a263582b.js"><link rel="prefetch" href="/blog/assets/js/32.434785d8.js"><link rel="prefetch" href="/blog/assets/js/33.73f26596.js"><link rel="prefetch" href="/blog/assets/js/34.c4fb3767.js"><link rel="prefetch" href="/blog/assets/js/35.e8ff9422.js"><link rel="prefetch" href="/blog/assets/js/36.0252fde3.js"><link rel="prefetch" href="/blog/assets/js/37.1e89f062.js"><link rel="prefetch" href="/blog/assets/js/38.d84daf6a.js"><link rel="prefetch" href="/blog/assets/js/39.9bf7e592.js"><link rel="prefetch" href="/blog/assets/js/4.068bd1c5.js"><link rel="prefetch" href="/blog/assets/js/40.9d39ea55.js"><link rel="prefetch" href="/blog/assets/js/41.42a663a1.js"><link rel="prefetch" href="/blog/assets/js/42.3a751d2f.js"><link rel="prefetch" href="/blog/assets/js/43.3a335356.js"><link rel="prefetch" href="/blog/assets/js/44.7d01f77e.js"><link rel="prefetch" href="/blog/assets/js/45.94380ee0.js"><link rel="prefetch" href="/blog/assets/js/46.c3daaae4.js"><link rel="prefetch" href="/blog/assets/js/47.0ef93bcd.js"><link rel="prefetch" href="/blog/assets/js/48.5b1a24b8.js"><link rel="prefetch" href="/blog/assets/js/49.c39c7fef.js"><link rel="prefetch" href="/blog/assets/js/5.bb18b958.js"><link rel="prefetch" href="/blog/assets/js/50.43f38f52.js"><link rel="prefetch" href="/blog/assets/js/51.fb3a6504.js"><link rel="prefetch" href="/blog/assets/js/52.d09c3b70.js"><link rel="prefetch" href="/blog/assets/js/53.06f6490b.js"><link rel="prefetch" href="/blog/assets/js/54.437f5d1a.js"><link rel="prefetch" href="/blog/assets/js/55.eb0681e9.js"><link rel="prefetch" href="/blog/assets/js/56.089548ed.js"><link rel="prefetch" href="/blog/assets/js/57.d545c4fe.js"><link rel="prefetch" href="/blog/assets/js/58.70be975f.js"><link rel="prefetch" href="/blog/assets/js/59.eebe4e88.js"><link rel="prefetch" href="/blog/assets/js/6.4d3dd8e5.js"><link rel="prefetch" href="/blog/assets/js/60.91b3ed77.js"><link rel="prefetch" href="/blog/assets/js/61.71e6c721.js"><link rel="prefetch" href="/blog/assets/js/62.28e384bf.js"><link rel="prefetch" href="/blog/assets/js/63.6646438b.js"><link rel="prefetch" href="/blog/assets/js/64.302d43d4.js"><link rel="prefetch" href="/blog/assets/js/65.271d4d28.js"><link rel="prefetch" href="/blog/assets/js/66.90a8840e.js"><link rel="prefetch" href="/blog/assets/js/67.1ad437d0.js"><link rel="prefetch" href="/blog/assets/js/68.90855765.js"><link rel="prefetch" href="/blog/assets/js/7.481a6611.js"><link rel="prefetch" href="/blog/assets/js/70.3853662a.js"><link rel="prefetch" href="/blog/assets/js/71.98d8eeee.js"><link rel="prefetch" href="/blog/assets/js/72.fff2c9b2.js"><link rel="prefetch" href="/blog/assets/js/73.3d888aa9.js"><link rel="prefetch" href="/blog/assets/js/74.f4c59cfe.js"><link rel="prefetch" href="/blog/assets/js/75.39a7ef7e.js"><link rel="prefetch" href="/blog/assets/js/76.9faa10ae.js"><link rel="prefetch" href="/blog/assets/js/77.ac1b1239.js"><link rel="prefetch" href="/blog/assets/js/78.614fab51.js"><link rel="prefetch" href="/blog/assets/js/79.91b89113.js"><link rel="prefetch" href="/blog/assets/js/8.a7cdda78.js"><link rel="prefetch" href="/blog/assets/js/80.aaa67e21.js"><link rel="prefetch" href="/blog/assets/js/81.1e302fb8.js"><link rel="prefetch" href="/blog/assets/js/82.fce58955.js"><link rel="prefetch" href="/blog/assets/js/83.36cc12dd.js"><link rel="prefetch" href="/blog/assets/js/84.512f6776.js"><link rel="prefetch" href="/blog/assets/js/85.b32496e1.js"><link rel="prefetch" href="/blog/assets/js/86.f741c1ec.js"><link rel="prefetch" href="/blog/assets/js/87.29d27f1f.js"><link rel="prefetch" href="/blog/assets/js/88.3b0964ad.js"><link rel="prefetch" href="/blog/assets/js/89.12851ce5.js"><link rel="prefetch" href="/blog/assets/js/9.48986d07.js"><link rel="prefetch" href="/blog/assets/js/90.2f222f77.js"><link rel="prefetch" href="/blog/assets/js/91.edf5550b.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.4a9e7301.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">周小可</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/gcd/" class="nav-link">GCD</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/locks/" class="nav-link">iOS中的锁</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/performance-optimization/" class="nav-link">性能优化</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/responder/" class="nav-link">事件响应</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/image_decode/" class="nav-link">图片编解码</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/nshashtable-nsmaptable/" class="nav-link">NSHashTable 和 NSMapTable</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/dttext/" class="nav-link">图文混排与 DTCoreText</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/mvvm/" class="nav-link">MVVM 实战</a></li><li class="dropdown-item"><!----> <a href="https://github.com/hnxczk/InfiniteTree" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  InfiniteTree
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/hnxczk/ScrollViewAutoAdjust" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ScrollViewAutoAdjust
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="/blog/articles/instruments/" class="nav-link">Instruments 分析</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/note/" class="nav-link">笔记</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/mdn/" class="nav-link">MDN 学习笔记</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/02/" class="nav-link">JavaScript 类型</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/03/" class="nav-link">JavaScript 对象和原型链</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/05/" class="nav-link">JavaScript 执行上下文和执行栈</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/06/" class="nav-link">JavaScript 作用域链与闭包</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/head-first-design-pattern/" class="nav-link">Head First 设计模式</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/Graphic-Design-Patterns/" class="nav-link">图说设计模式</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-algorithm/" class="nav-link router-link-active">极客时间-算法</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/" class="nav-link">极客时间-重学前端</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/network-study/" class="nav-link">极客时间-网络</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">源码解析</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/sd/" class="nav-link">SDWebImage</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/runtime/index/" class="nav-link">Runtime</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">算法</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/hash-map/" class="nav-link">哈希表</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/search/" class="nav-link">查找</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/algorithm-interview/" class="nav-link">面试遇到的算法</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">网络</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/networking/" class="nav-link">哈希表</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/http-https/" class="nav-link">HTTP与HTTPS</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">工程化</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/ios-coding-style/" class="nav-link">iOS 代码规范</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/ios-code-review/" class="nav-link">iOS 代码审核</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/configura/" class="nav-link">多环境配置</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/ios-app-on-line/" class="nav-link">开发者账号相关</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/uml/" class="nav-link">UML类图</a></li></ul></div></div> <a href="https://github.com/hnxczk/hnxczk.github.io.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/gcd/" class="nav-link">GCD</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/locks/" class="nav-link">iOS中的锁</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/performance-optimization/" class="nav-link">性能优化</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/responder/" class="nav-link">事件响应</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/image_decode/" class="nav-link">图片编解码</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/nshashtable-nsmaptable/" class="nav-link">NSHashTable 和 NSMapTable</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/dttext/" class="nav-link">图文混排与 DTCoreText</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/mvvm/" class="nav-link">MVVM 实战</a></li><li class="dropdown-item"><!----> <a href="https://github.com/hnxczk/InfiniteTree" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  InfiniteTree
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/hnxczk/ScrollViewAutoAdjust" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ScrollViewAutoAdjust
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="/blog/articles/instruments/" class="nav-link">Instruments 分析</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/note/" class="nav-link">笔记</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/mdn/" class="nav-link">MDN 学习笔记</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/02/" class="nav-link">JavaScript 类型</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/03/" class="nav-link">JavaScript 对象和原型链</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/05/" class="nav-link">JavaScript 执行上下文和执行栈</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/06/" class="nav-link">JavaScript 作用域链与闭包</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/head-first-design-pattern/" class="nav-link">Head First 设计模式</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/Graphic-Design-Patterns/" class="nav-link">图说设计模式</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-algorithm/" class="nav-link router-link-active">极客时间-算法</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/reading-notes/geekbang-winter/" class="nav-link">极客时间-重学前端</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/network-study/" class="nav-link">极客时间-网络</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">源码解析</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/sd/" class="nav-link">SDWebImage</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/runtime/index/" class="nav-link">Runtime</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">算法</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/hash-map/" class="nav-link">哈希表</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/search/" class="nav-link">查找</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/algorithm-interview/" class="nav-link">面试遇到的算法</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">网络</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/networking/" class="nav-link">哈希表</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/http-https/" class="nav-link">HTTP与HTTPS</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">工程化</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/articles/ios-coding-style/" class="nav-link">iOS 代码规范</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/ios-code-review/" class="nav-link">iOS 代码审核</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/configura/" class="nav-link">多环境配置</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/ios-app-on-line/" class="nav-link">开发者账号相关</a></li><li class="dropdown-item"><!----> <a href="/blog/articles/uml/" class="nav-link">UML类图</a></li></ul></div></div> <a href="https://github.com/hnxczk/hnxczk.github.io.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>排序</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/articles/reading-notes/geekbang-algorithm/11-14.html#_11-排序：冒泡，插入，选择" class="sidebar-link">11 排序：冒泡，插入，选择</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/articles/reading-notes/geekbang-algorithm/11-14.html#如何分析一个排序算法" class="sidebar-link">如何分析一个排序算法</a></li><li class="sidebar-sub-header"><a href="/blog/articles/reading-notes/geekbang-algorithm/11-14.html#冒泡排序" class="sidebar-link">冒泡排序</a></li><li class="sidebar-sub-header"><a href="/blog/articles/reading-notes/geekbang-algorithm/11-14.html#插入排序" class="sidebar-link">插入排序</a></li><li class="sidebar-sub-header"><a href="/blog/articles/reading-notes/geekbang-algorithm/11-14.html#选择排序" class="sidebar-link">选择排序</a></li><li class="sidebar-sub-header"><a href="/blog/articles/reading-notes/geekbang-algorithm/11-14.html#插入与冒泡比较" class="sidebar-link">插入与冒泡比较</a></li><li class="sidebar-sub-header"><a href="/blog/articles/reading-notes/geekbang-algorithm/11-14.html#qa-使用链表实现" class="sidebar-link">QA 使用链表实现</a></li></ul></li><li><a href="/blog/articles/reading-notes/geekbang-algorithm/11-14.html#_12-排序：归并排序，快速排序" class="sidebar-link">12 排序：归并排序，快速排序</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/articles/reading-notes/geekbang-algorithm/11-14.html#归并排序" class="sidebar-link">归并排序</a></li><li class="sidebar-sub-header"><a href="/blog/articles/reading-notes/geekbang-algorithm/11-14.html#快速排序" class="sidebar-link">快速排序</a></li><li class="sidebar-sub-header"><a href="/blog/articles/reading-notes/geekbang-algorithm/11-14.html#qa-o-n-时间复杂度内求无序数组中的第-k-大元素" class="sidebar-link">QA : O(n) 时间复杂度内求无序数组中的第 K 大元素</a></li></ul></li><li><a href="/blog/articles/reading-notes/geekbang-algorithm/11-14.html#_13-线性排序：桶排序，计数排序，基数排序" class="sidebar-link">13 线性排序：桶排序，计数排序，基数排序</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/articles/reading-notes/geekbang-algorithm/11-14.html#桶排序" class="sidebar-link">桶排序</a></li><li class="sidebar-sub-header"><a href="/blog/articles/reading-notes/geekbang-algorithm/11-14.html#计数排序" class="sidebar-link">计数排序</a></li><li class="sidebar-sub-header"><a href="/blog/articles/reading-notes/geekbang-algorithm/11-14.html#基数排序" class="sidebar-link">基数排序</a></li><li class="sidebar-sub-header"><a href="/blog/articles/reading-notes/geekbang-algorithm/11-14.html#qa-对于一组包含大小写的字符进行排序，使小写的排在大写的前面。若字符中不仅有大小写还有数字的话就将数字放中间" class="sidebar-link">QA 对于一组包含大小写的字符进行排序，使小写的排在大写的前面。若字符中不仅有大小写还有数字的话就将数字放中间</a></li></ul></li><li><a href="/blog/articles/reading-notes/geekbang-algorithm/11-14.html#_14-排序优化" class="sidebar-link">14 排序优化</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/articles/reading-notes/geekbang-algorithm/11-14.html#排序算法选择" class="sidebar-link">排序算法选择</a></li><li class="sidebar-sub-header"><a href="/blog/articles/reading-notes/geekbang-algorithm/11-14.html#快排优化" class="sidebar-link">快排优化</a></li><li class="sidebar-sub-header"><a href="/blog/articles/reading-notes/geekbang-algorithm/11-14.html#通用排序函数实现技巧" class="sidebar-link">通用排序函数实现技巧</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="排序"><a href="#排序" aria-hidden="true" class="header-anchor">#</a> 排序</h1> <h2 id="_11-排序：冒泡，插入，选择"><a href="#_11-排序：冒泡，插入，选择" aria-hidden="true" class="header-anchor">#</a> 11 排序：冒泡，插入，选择</h2> <h3 id="如何分析一个排序算法"><a href="#如何分析一个排序算法" aria-hidden="true" class="header-anchor">#</a> 如何分析一个排序算法</h3> <h4 id="执行效率"><a href="#执行效率" aria-hidden="true" class="header-anchor">#</a> 执行效率</h4> <ul><li>最好情况、最坏情况、平均情况时间复杂度</li> <li>时间复杂度的系数、常数、低阶</li> <li>比较次数和交换、移动次数</li></ul> <h4 id="内存消耗"><a href="#内存消耗" aria-hidden="true" class="header-anchor">#</a> 内存消耗</h4> <p>原地排序：特指空间复杂度是 O(1)的排序算法。</p> <h4 id="稳定性"><a href="#稳定性" aria-hidden="true" class="header-anchor">#</a> 稳定性</h4> <p>经过排序算法的排序之后，如果原来数据中相同元素的前后顺序没有发生改变，这种算法就称为稳定的排序算法，否则称为不稳定的排序算法。</p> <h3 id="冒泡排序"><a href="#冒泡排序" aria-hidden="true" class="header-anchor">#</a> 冒泡排序</h3> <p>冒泡排序的原理就是比较相邻元素的大小，符合条件则交换相邻元素的位置，否则继续遍历。</p> <div class="language- extra-class"><pre class="language-text"><code>void bubbleSort(int *array, int n)
+{
+    if (n &lt;= 1) return;
+    
+    for (int i = 0; i &lt; n; ++i) {
+        bool change = false;
+        for (int j = 0; j &lt; n-i-1; ++j) {
+            if (array[j] &gt; array[j+1]) {
+                int tmp = array[j+1];
+                array[j+1] = array[j];
+                array[j] = tmp;
+                change = true;
+            }
+        }
+        if (!change) break;
+    }
+}
+</code></pre></div><p><strong>编码的过程</strong></p> <ol><li>由于每次冒泡只能确定一个最值的位置，因此要想全部排序就需要两个 for 循环</li> <li>外侧循环表示冒泡的次数，因此循环次数与元素个数 n 相同</li> <li>内侧循环执行冒泡操作，由于每次冒泡能确定一个元素的最终位置，因此第 i 次冒泡需要操作的元素个数是 n-1-i 个。因此内侧循环从 0 开始 执行 n-i-1 次</li> <li>如果一次冒泡过程中没有改变元素的位置，只表明元素的顺序已经排好，因此可以通过一个标识标识一次冒泡的过程中是否改变元素位置，如果没有更改就直接退出外侧循环。这样实现了冒泡的优化</li></ol> <h4 id="冒泡排序是否是原地算法"><a href="#冒泡排序是否是原地算法" aria-hidden="true" class="header-anchor">#</a> 冒泡排序是否是原地算法</h4> <p>是，空间复杂度是 O(1)</p> <h4 id="冒泡排序是否是稳定的排序"><a href="#冒泡排序是否是稳定的排序" aria-hidden="true" class="header-anchor">#</a> 冒泡排序是否是稳定的排序</h4> <p>是，冒泡的过程中只有当相邻元素的大小不同时才会去改变顺序，相同的元素不会改变顺序。</p> <h4 id="冒泡排序的时间复杂度"><a href="#冒泡排序的时间复杂度" aria-hidden="true" class="header-anchor">#</a> 冒泡排序的时间复杂度</h4> <p>最好情况时间复杂度 O(n)
+最坏情况时间复杂度 O(n^2)</p> <p>平均时间复杂度通过有序度和逆序度分析</p> <ul><li>有序度：数组中具有有序关系的元素对的个数</li> <li>逆序度：数组中具有逆序关系的元素对的个数</li> <li>满有序度：完全有序的数组的有序度</li></ul> <div class="language- extra-class"><pre class="language-text"><code>逆序度 = 满有序度 - 有序度
+</code></pre></div><p>对于 n 个元素的数组，满有序度为 n*(n-1)/2</p> <p>最坏情况下有序度为 0，则逆序度为 n*(n-1)/2。这时候要将逆序度减为 0，则需要 n*(n-1)/2 次交换。</p> <p>因此平均情况下需要 n*(n-1)/4 次交换，因此平均情况复杂度为 O(n^2)</p> <h3 id="插入排序"><a href="#插入排序" aria-hidden="true" class="header-anchor">#</a> 插入排序</h3> <p>插入排序的原理就是动态的往有序集合中添加数据。将数组分为已排序区和未排序区，不断将未排序区的元素插入到已排序区中。初始的已排序区只有数组的第一个元素，然后不断添加，直到全部排序完成。</p> <div class="language- extra-class"><pre class="language-text"><code>void insertionSort(int *array, int n)
+{
+    if (n &lt;= 1) return;
+    
+    for (int i = 1; i &lt; n; ++i) {
+        int val = array[i];
+        int j = i-1;
+        for (; j &gt;= 0; --j) {
+            if (array[j] &gt; val) {
+                array[j+1] = array[j];
+            } else {
+                break;
+            }
+        }
+        array[j+1] = val;
+    }
+}
+</code></pre></div><p><strong>编码的过程</strong></p> <ol><li>由于需要把数组的所有元素不断插入已排序区，在插入排序区的过程中需要不断比较插入元素与之前已排序区元素的大小，因此需要两个 for 循环</li> <li>外侧循环用来遍历所有的元素，因此从 0 开始，循环 n 次</li> <li>内侧循环用来比较已经选中的元素 array[i] 与已排序区的元素比较，从后往前遍历，因此从 i-1 开始，循环 i-1 次</li> <li>在内侧循环比较已选中元素 array[i] 与已排序元素时，如果已选中元素满足条件（比如上面的 大于）就替换二者位置，相当于把已选中元素插入到当前已排序元素之前，直到不满足条件说明 选中元素插入到了正确的位置，跳出循环。</li> <li>内侧循环过一次之后，将 选中的元素插入到内循环结束时的位置，由于内循环体结束时 j 是最终插入的前一个位置，因此需要把选中的元素插入到 j+1 的位置上。</li></ol> <h4 id="插入排序是否是原地算法"><a href="#插入排序是否是原地算法" aria-hidden="true" class="header-anchor">#</a> 插入排序是否是原地算法</h4> <p>是，空间复杂度是 O(1)</p> <h4 id="插入排序是否是稳定的排序"><a href="#插入排序是否是稳定的排序" aria-hidden="true" class="header-anchor">#</a> 插入排序是否是稳定的排序</h4> <p>是，插入的过程中可以将后面出现的元素插入到前面出现元素的后面，这样以来就不会改变之前相同元素的顺序。</p> <h4 id="插入排序的时间复杂度"><a href="#插入排序的时间复杂度" aria-hidden="true" class="header-anchor">#</a> 插入排序的时间复杂度</h4> <p>最好是时间复杂度为 O(n)
+最坏情况时间复杂度为 O(n^2)</p> <p>有序数组中插入某个元素的平均时间复杂度是 O(n), 而插入排序需要遍历数组的元素，将每个元素都插入到有序区间中，因此其平均时间复杂度为 O(n^2)</p> <h3 id="选择排序"><a href="#选择排序" aria-hidden="true" class="header-anchor">#</a> 选择排序</h3> <p>选择排序通过不断遍历未排序的区域，每次都用一个变量记录最小（大）值的位置，找到位置之后在遍历结束后交换最值与第一个未排序元素的位置</p> <div class="language- extra-class"><pre class="language-text"><code>void selectionSort(int *array, int n)
+{
+    if (n &lt;= 1) return;
+    
+    for (int i = 0; i &lt; n; ++i) {
+        int index = i;
+        for (int j = i+1; j &lt; n; ++j) {
+            if (array[j] &lt; array[index]) {
+                index = j;
+            }
+        }
+        if (index != i) {
+            int tmp = array[i];
+            array[i] = array[index];
+            array[index] = tmp;
+        }
+    }
+}
+</code></pre></div><p><strong>实现步骤</strong></p> <ol><li>遍历未排序区查找最值需要一个循环，每次遍历完未排序区之后未排序区就发生了变化，因此需要再次遍历直到未排序区消失，于是要有两个循环嵌套</li> <li>由于每次内侧循环能确定一个最值的位置，因此外循环从 0 开始 遍历 n 次</li> <li>内侧循环用来遍历当前未排序区，查找到最值的位置，然后在循环结束之后交换未排序区的第一个元素和最值的位置</li></ol> <h4 id="选择排序是否是原地算法"><a href="#选择排序是否是原地算法" aria-hidden="true" class="header-anchor">#</a> 选择排序是否是原地算法</h4> <p>是，空间复杂度是 O(1)</p> <h4 id="选择排序是否是稳定的排序"><a href="#选择排序是否是稳定的排序" aria-hidden="true" class="header-anchor">#</a> 选择排序是否是稳定的排序</h4> <p>不是，每次选择最值之后就与未排序区第一个位置交换，这就会打乱之前的相同元素的排序，因此不是稳定的排序。</p> <h4 id="插入排序的时间复杂度-2"><a href="#插入排序的时间复杂度-2" aria-hidden="true" class="header-anchor">#</a> 插入排序的时间复杂度</h4> <p>最好是时间复杂度为 O(n)
+最坏情况时间复杂度为 O(n^2)
+其平均时间复杂度为 O(n^2)</p> <h3 id="插入与冒泡比较"><a href="#插入与冒泡比较" aria-hidden="true" class="header-anchor">#</a> 插入与冒泡比较</h3> <p>冒泡排序中每次交换相邻元素位置需要的进行的操作比插入排序的数据移动来说更为耗时，因此插入排序一般优于冒泡排序。</p> <h3 id="qa-使用链表实现"><a href="#qa-使用链表实现" aria-hidden="true" class="header-anchor">#</a> QA 使用链表实现</h3> <blockquote><p>对于老师所提课后题，觉得应该有个前提，是否允许修改链表的节点value值，还是只能改变节点的位置。一般而言，考虑只能改变节点位置，冒泡排序相比于数组实现，比较次数一致，但交换时操作更复杂；插入排序，比较次数一致，不需要再有后移操作，找到位置后可以直接插入，但排序完毕后可能需要倒置链表；选择排序比较次数一致，交换操作同样比较麻烦。综上，时间复杂度和空间复杂度并无明显变化，若追求极致性能，冒泡排序的时间复杂度系数会变大，插入排序系数会减小，选择排序无明显变化。</p></blockquote> <h2 id="_12-排序：归并排序，快速排序"><a href="#_12-排序：归并排序，快速排序" aria-hidden="true" class="header-anchor">#</a> 12 排序：归并排序，快速排序</h2> <h3 id="归并排序"><a href="#归并排序" aria-hidden="true" class="header-anchor">#</a> 归并排序</h3> <p>归并排序使用了<strong>分治思想</strong>，将一个大问题分解成小的子问题。而分治算法一般都通过递归来实现。</p> <p>其思路就是讲一个数组的排序分为两个子数组的排序，两个子数组排序完成后按大小顺序合并两个子数组就等到了排好序的整个数组。</p> <div class="language- extra-class"><pre class="language-text"><code>void merge_sort_recursive(int arr[], int reg[], int start, int end)
+{
+    // 递归基础
+    if (start &gt;= end) return;
+    
+    // 求中间点，len &gt;&gt; 1 相当于 len / 2
+    int len = end - start, mid = (len &gt;&gt; 1) + start;
+    // 分别归并排序
+    int start1 = start, end1 = mid;
+    int start2 = mid + 1, end2 = end;
+
+    merge_sort_recursive(arr, reg, start1, end1);
+    merge_sort_recursive(arr, reg, start2, end2);
+    
+    // 合并排序好的数组
+    // k 用来标识已经合并好数组中的最后的位置
+    int k = start;
+    while (start1 &lt;= end1 &amp;&amp; start2 &lt;= end2) {
+        reg[k++] = arr[start1] &lt;= arr[start2] ? arr[start1++] : arr[start2++];
+    }
+    // 此时说明前半段数据多于后半部分
+    while (start1 &lt;= end1) {
+        reg[k++] = arr[start1++];
+    }
+    // 此时说明后半段数据多于前半部分
+    while (start2 &lt;= end2) {
+        reg[k++] = arr[start2++];
+    }
+    
+    // 将辅助数组中数据拷贝到原数组
+    for (k = start; k &lt;= end; k++) {
+        arr[k] = reg[k];
+    }
+}
+
+void merge_sort(int arr[], int len)
+{
+    int reg[len];
+    merge_sort_recursive(arr, reg, 0, len-1);
+}
+</code></pre></div><h4 id="思路"><a href="#思路" aria-hidden="true" class="header-anchor">#</a> 思路</h4> <ul><li><p>由于需要进行递归，而且在合并子数组的时候需要额外的内存空间来存放排好序的数组，因此需要辅助函数 merge_sort_recursive，然后声明一个大小与原数组相同的辅助数组来存放排好序的元素</p></li> <li><p>然后编写递归函数，找到递推公式和递推基础</p> <ul><li>递推公式</li></ul> <div class="language- extra-class"><pre class="language-text"><code>merge_sort(start...end) = merge_sort(start...mid), merge_sort(mid+1...end)
+</code></pre></div><ul><li>递推基础</li></ul> <div class="language- extra-class"><pre class="language-text"><code>start &gt;= end
+</code></pre></div></li> <li><p>编写合并子数组的代码</p> <ul><li>使用两个变量 start1、start2 指向两个子数组中尚未合并的第一个元素的下标</li> <li>使用变量 k 指向合并好的数组中的位置</li> <li>每次从子数组中取最小的元素放入合并好的数组之中，并移动各个指示变量</li> <li>第一个循环过后将子数组中剩余元素拼接到排好序的数组中</li> <li>将辅助数组中数据拷贝到原数组</li></ul></li></ul> <h4 id="归并排序性能"><a href="#归并排序性能" aria-hidden="true" class="header-anchor">#</a> 归并排序性能</h4> <h5 id="归并排序是稳定的排序算法"><a href="#归并排序是稳定的排序算法" aria-hidden="true" class="header-anchor">#</a> 归并排序是稳定的排序算法</h5> <p>在合并子数组的过程中先将左侧子数组放入合并好的数组中就可以实现稳定的排序算法</p> <h5 id="归并排序的时间复杂度是-o-nlogn"><a href="#归并排序的时间复杂度是-o-nlogn" aria-hidden="true" class="header-anchor">#</a> 归并排序的时间复杂度是 O(nlogn)</h5> <p><strong>不仅递归求解的问题可以写成递推公式，递归代码的时间复杂度也可以写成递推公式</strong></p> <p>递归代码时间复杂度递推公式</p> <div class="language- extra-class"><pre class="language-text"><code>T(a) = T(b) + T(c) + K
+</code></pre></div><p>归并排序的时间复杂度计算公式</p> <div class="language- extra-class"><pre class="language-text"><code>T(1) = C；   n=1 时，只需要常量级的执行时间，所以表示为 C。
+T(n) = 2*T(n/2) + n； n&gt;1
+</code></pre></div><p>不断将 n 代入</p> <div class="language- extra-class"><pre class="language-text"><code>T(n) = 2*T(n/2) + n
+     = 2*(2*T(n/4) + n/2) + n       = 4*T(n/4) + 2*n
+     = 4*(2*T(n/8) + n/4) + 2*n     = 8*T(n/8) + 3*n
+     = 8*(2*T(n/16) + n/8) + 3*n    = 16*T(n/16) + 4*n
+     ......
+     = 2^k * T(n/2^k) + k * n
+     ......
+</code></pre></div><p>由于 T(1) = C 则 n/2^k = 1 时 T(n/2^k) = C 此时 k = log2n, 代入可得到
+T(n)=Cn+nlog2n</p> <h5 id="归并排序的空间复杂度是-o-n"><a href="#归并排序的空间复杂度是-o-n" aria-hidden="true" class="header-anchor">#</a> 归并排序的空间复杂度是 O(n)</h5> <p>归并排序不是原地排序算法，需要额外的空间来合并数据。</p> <h3 id="快速排序"><a href="#快速排序" aria-hidden="true" class="header-anchor">#</a> 快速排序</h3> <p>快速排序也是使用了分治思想，基本思路就是先找到一个枢轴点（分区点）pivot，然后遍历数据，将小于 pivot 的放于左侧，大于的放于右侧。然后分别对枢轴点左右两侧区间的数组进行排序，直到区间缩小到 1 。这时候整个数组就是有序的了。</p> <p>递归代码</p> <div class="language- extra-class"><pre class="language-text"><code>void quick_sort_recursive(int arr[], int start, int end)
+{
+    if (start &gt;= end) return;
+    
+    int pivot = partition_1(arr, start, end);
+    
+    quick_sort_recursive(arr, start, pivot - 1);
+    quick_sort_recursive(arr, pivot + 1, end);
+}
+
+void quick_sort(int arr[], int len)
+{
+    quick_sort_recursive(arr, 0, len - 1);
+}
+</code></pre></div><p>查找枢轴代码</p> <div class="language- extra-class"><pre class="language-text"><code>void swap(int *a, int *b)
+{
+    int tmp = *a;
+    *a = *b;
+    *b = tmp;
+}
+
+// 方法 1
+int partition(int arr[], int low, int high)
+{
+    // pivot 记录枢轴大小，以起始位置数据大小为枢轴
+    int pivot = arr[low];
+    
+    while (low &lt; high) {
+        // 从右侧开始查找，直到查找到小于枢轴的位置
+        while (arr[high] &gt;= pivot &amp;&amp; low &lt; high) {
+            --high;
+        }
+        // 将右侧小于枢轴大小的值交换到左侧
+        swap(&amp;arr[low], &amp;arr[high]);
+        // 从左侧开始查找，直到查找到大于枢轴的位置
+        while (arr[low] &lt;= pivot &amp;&amp; low &lt; high) {
+            ++low;
+        }
+        // 将左侧大于枢轴的值交换到右侧
+        swap(&amp;arr[low], &amp;arr[high]);
+    }
+    // 跳出循环说明 low 和 high 重合，此时所有小于枢轴的值位于枢轴值的左侧，大于的位于右侧
+    
+    return low;
+}
+
+// 方法 2
+int partition_1(int arr[], int low, int high)
+{
+    // 取最右侧值为枢轴，i 来作为游标分割比枢轴值小的值和比枢轴大的值
+    int pivot = arr[high], i = low;
+    
+    // 通过 j 来遍历未处理的数据
+    for (int j = low; j &lt; high; ++j) {
+        // 未处理数据小于枢轴，则将其放到已处理区的最后，然后已处理区的大小 +1
+        if (arr[j] &lt; pivot) {
+            swap(&amp;arr[i], &amp;arr[j]);
+            ++i;
+        }
+    }
+    // 位于 i 位置之前的都是小于枢轴的，i 和它之后的都是大于枢轴的，交换 i 位置和选定的枢轴的值
+    swap(&amp;arr[i], &amp;arr[high]);
+    
+    return i;
+}
+</code></pre></div><h4 id="思路-2"><a href="#思路-2" aria-hidden="true" class="header-anchor">#</a> 思路</h4> <ul><li><p>首先需要查找枢轴点</p> <ol><li>思路一
+<ol><li>首先以起始点作为枢轴，使用变量 pivot 记录枢轴点的值</li> <li>分别使用变量 low 和 high 记录还未处理的分区，大于 low 小于 high 的区间是未处理的区间，其他都是处理过的区间，处理过的区间能保证左侧的全都小于枢轴的值，右侧全都大于枢轴的值</li> <li>从右侧开始查找，直到查找到小于枢轴值的位置</li> <li>将右侧小于枢轴的值交换到左侧小于枢轴的区间，枢轴值现在就在右侧</li> <li>从左侧开始查找，直到找到大于枢轴值的位置</li> <li>将左侧大于枢轴的值交换到右侧，枢轴值现在位于左侧</li> <li>就这样不停交换枢轴的位置直到未处理的区间全部处理完成，此时所有小于枢轴的值位于枢轴值的左侧，大于的位于右侧</li></ol></li> <li>思路二
+<ol><li>取最右侧值为枢轴，i 为游标标记小于枢轴值的区域（小区）， 小于等于 i 位置的区域都是小于枢轴的值</li> <li>通过 j 遍历未处理的数据</li> <li>处理数据，如果其小于枢轴则放到 小区 最后面，也就是 i 指示的位置，然后 i 后移，表示 小区 增加</li> <li>退出循环表示所有的数据都已经处理， 小于 i 指示位置之前的都是小于枢轴的值，大于 i 的位置除了最后的枢轴，都大于枢轴的值</li> <li>交换枢轴与 i 指向值的位置，此时所有小于枢轴的值位于枢轴值的左侧，大于的位于右侧</li></ol></li></ol></li> <li><p>编写递归函数</p> <ul><li>递推函数</li></ul> <div class="language- extra-class"><pre class="language-text"><code>quick_sort(start...end) = quick_sort(start...pivot-1), quick_sort(pivot+1...end)
+</code></pre></div><ul><li>递归基础</li></ul> <div class="language- extra-class"><pre class="language-text"><code>start &gt;= end
+</code></pre></div></li></ul> <h4 id="快排的性能"><a href="#快排的性能" aria-hidden="true" class="header-anchor">#</a> 快排的性能</h4> <h5 id="快速排序不是稳定的排序算法"><a href="#快速排序不是稳定的排序算法" aria-hidden="true" class="header-anchor">#</a> 快速排序不是稳定的排序算法</h5> <p>上面的所有思路都会在分区的过程涉及交换操作，这就会改变相邻元素的顺序，因此不稳定。</p> <h5 id="快速排序时间复杂度是-o-nlogn"><a href="#快速排序时间复杂度是-o-nlogn" aria-hidden="true" class="header-anchor">#</a> 快速排序时间复杂度是 O(nlogn)</h5> <p>如果每次分区操作，都能正好把数组分成大小接近相等的两个小区间，那快排的时间复杂度递推求解公式跟归并是相同的。所以，快排的时间复杂度也是 O(nlogn)。</p> <p>当然不是每次选择枢轴都是正好位于中间，当枢轴两端分区极度不平衡的时候,需要进行将近 n 次分区，此时快排的时间复杂度会退化为 O(n^2)。</p> <h5 id="快速排序空间复杂度是-o-1"><a href="#快速排序空间复杂度是-o-1" aria-hidden="true" class="header-anchor">#</a> 快速排序空间复杂度是 O(1)</h5> <p>上面的解题思路中没有涉及到额外内存空间，因此是原地排序算法。</p> <h3 id="qa-o-n-时间复杂度内求无序数组中的第-k-大元素"><a href="#qa-o-n-时间复杂度内求无序数组中的第-k-大元素" aria-hidden="true" class="header-anchor">#</a> QA : O(n) 时间复杂度内求无序数组中的第 K 大元素</h3> <p>利用快排的分区的思路</p> <ul><li>选择某个元素作为枢轴，对数组进行原地分区，p 表示枢轴所在的位置</li> <li>由于是查找第k大的值，因此左侧区域放大值，右侧区域放小值
+<ol><li>若 p + 1 &gt; K ，则 说明第 K 大的元素位于右侧侧小值区，继续在右侧侧区间查找</li> <li>若 p + 1 &lt; K 则说明第 K 大的元素位于左侧大值区， 继续再左侧区间查找</li> <li>若 p + 1 = K 说明 p 所在位置对应的值就是要查找的值</li></ol></li></ul> <div class="language- extra-class"><pre class="language-text"><code>int partition(int arr[], int start, int end)
+{
+    int pivot = arr[end], i = start;
+    for (int j = start; j &lt; end; ++j) {
+        if (arr[j] &gt; pivot) {
+            swap(&amp;arr[j], &amp;arr[i]);
+            ++i;
+        }
+    }
+    swap(&amp;arr[end], &amp;arr[i]);
+    return i;
+}
+
+int KthLargest(int arr[], int n, int K)
+{
+    if (K &lt;= 0) return -1;
+    
+    int pivot = -1, start = 0, end = n - 1;
+    while (pivot + 1 != K) {
+        pivot = partition(arr, start, end);
+        if (pivot + 1 &gt; K) {
+            end = pivot - 1;
+        } else if (pivot + 1 &lt; K) {
+            start = pivot + 1;
+        }
+    }
+    return arr[pivot];
+}
+</code></pre></div><h2 id="_13-线性排序：桶排序，计数排序，基数排序"><a href="#_13-线性排序：桶排序，计数排序，基数排序" aria-hidden="true" class="header-anchor">#</a> 13 线性排序：桶排序，计数排序，基数排序</h2> <h3 id="桶排序"><a href="#桶排序" aria-hidden="true" class="header-anchor">#</a> 桶排序</h3> <h4 id="思路-3"><a href="#思路-3" aria-hidden="true" class="header-anchor">#</a> 思路</h4> <p>将要排序的数据分到几个有序的桶里，对每个桶里的数据再单独进行排序。排序完成之后再把每个桶里的数据按照顺序依次取出，组成新的序列就是有序的了。</p> <h4 id="时间复杂度"><a href="#时间复杂度" aria-hidden="true" class="header-anchor">#</a> 时间复杂度</h4> <ol><li>划分成 m 个桶，每个桶里的元素个数就是 k = n/m</li> <li>每个桶内使用快速排序，则每个桶时间复杂度就是 O(klogk)</li> <li>所有的桶的时间复杂度就是 O(m * klogk),也就是 O(m * (n/m)log(n/m)),继续简化 O(nlog(n/m))</li> <li>m 趋近于 n 的时候其趋近于 O(n)</li></ol> <h4 id="是稳定排序"><a href="#是稳定排序" aria-hidden="true" class="header-anchor">#</a> 是稳定排序</h4> <p>桶内排序方法是稳定排序的时候就是稳定的排序</p> <h4 id="不是原地排序"><a href="#不是原地排序" aria-hidden="true" class="header-anchor">#</a> 不是原地排序</h4> <p>需要用额外的空间来作为桶，因此不是原地排序，空间复杂度是 O(n + k), k 是桶的个数</p> <h4 id="使用条件"><a href="#使用条件" aria-hidden="true" class="header-anchor">#</a> 使用条件</h4> <ol><li>需要排序的数据需要很容易划分成 m 个桶，并且桶之间有着大小顺序</li> <li>每个桶中的数据分布要比较均匀</li></ol> <h4 id="适用情况"><a href="#适用情况" aria-hidden="true" class="header-anchor">#</a> 适用情况</h4> <p>桶排序比较适合用在外部排序中。也就是数据存储在外部磁盘且数据量大，但内存有限无法将整个数据全部加载到内存</p> <p><strong>需求描述：</strong></p> <p>有10GB的订单数据，需按订单金额（假设金额都是正整数）进行排序，但内存有限，仅几百MB</p> <p><strong>解决思路：</strong></p> <ul><li>扫描一遍文件，看订单金额所处数据范围，比如1元-10万元，那么就分100个桶。</li> <li>第一个桶存储金额1-1000元之内的订单，第二个桶存1001-2000元之内的订单，依次类推。</li> <li>每个桶对应一个文件，并按照金额范围的大小顺序编号命名（00，01，02，…，99）。</li> <li>将100个小文件依次放入内存并用快排排序。</li> <li>所有文件排好序后，只需按照文件编号从小到大依次读取每个小文件并写到大文件中即可。</li> <li></li></ul> <p><strong>注意点：</strong></p> <p>若单个文件无法全部载入内存，则针对该文件继续按照前面的思路进行处理即可。</p> <h3 id="计数排序"><a href="#计数排序" aria-hidden="true" class="header-anchor">#</a> 计数排序</h3> <h4 id="思路-4"><a href="#思路-4" aria-hidden="true" class="header-anchor">#</a> 思路</h4> <p>计数其实与桶排序非常类似，只是桶的粒度不同。当要排序的n个数据所处范围并不大时，比如最大值为k，则分成k个桶，这时每个桶内的数据值都是相同的。</p> <div class="language- extra-class"><pre class="language-text"><code>void counting_sort(int arr[], int n)
+{
+    if (n &lt;= 1) return;
+    
+    // 获取最大值
+    int max = arr[0];
+    for (int i = 1; i &lt; n; ++i) {
+        if (max &lt; arr[i]) {
+            max = arr[i];
+        }
+    }
+    
+    // 申请 max + 1 个空间 初始化为 0，记录元素的出现次数
+    int *counts = malloc(sizeof(int) * (max + 1));
+    for (int i = 0; i &lt;= max; ++i) {
+        counts[i] = 0;
+    }
+    
+    // 计算从 0 到 max 大小的这些元素出现的次数
+    for (int i = 0; i &lt; n; ++i) {
+        int val = arr[i];
+        counts[val]++;
+    }
+    
+    // 累加出现次数，遍历过后每个位置都记录了该小于等于该值的出现次数
+    for (int i = 1; i &lt;= max; ++i) {
+        counts[i] = counts[i] + counts[i - 1];
+    }
+    
+    // 临时数组
+    int *tmp = malloc(sizeof(int) * n);
+    // 遍历原数组
+    for (int i = n - 1; i &gt;= 0 ; --i) {
+        // 取到当前位置元素
+        int num = arr[i];
+        // 由于 counts[num] 记录就是小于等于 num 大小元素的出现次数，因此将其减一就能获取到排序完成之后该大小元素最后一个位置
+        int index = counts[num] - 1;
+        // 将该元素放到对应位置
+        tmp[index] = num;
+        // 由于上面 num 大小的元素有一个排好了顺序，这里将 counts 中 num 对应的次数减一
+        counts[num]--;
+    }
+    
+    // 将结果拷贝给原数组
+    for (int i = 0; i &lt; n; ++i) {
+        arr[i] = tmp[i];
+    }
+    
+    free(counts);
+    free(tmp);
+}
+</code></pre></div><p><strong>代码实现</strong></p> <ol><li>查找需要排序的数组中的最大值 max</li> <li>申请 max + 1 大小的数组 counts，用于记录每个大小的元素出现次数，全都初始化为 0</li> <li>遍历原数组，记录每个大小元素出现的次数</li> <li>累加每个元素出现的次数，比如 counts 中 k 这个位置记录了 <strong>小于等于</strong> k 大小元素出现的次数</li> <li>遍历原数组，由于 counts[num] 记录就是 <strong>小于等于</strong> num 大小元素的出现次数，因此将其减一就能获取到排序完成之后该大小元素最后一个位置</li> <li>将 num 放到 临时数组对应的位置</li> <li>放好一个 num 大小的元素后将 counts[num] 的值减去 1</li> <li>将临时数组的元素拷贝到原数组</li></ol> <h4 id="使用条件-2"><a href="#使用条件-2" aria-hidden="true" class="header-anchor">#</a> 使用条件</h4> <ol><li>只能用在数据范围不大的场景中，若数据范围k比要排序的数据n大很多，就不适合用计数排序；</li> <li>计数排序只能给非负整数排序，其他类型需要在不改变相对大小情况下，转换为非负整数；</li> <li>比如如果考试成绩精确到小数后一位，就需要将所有分数乘以10，转换为整数。</li></ol> <h4 id="时间复杂度-2"><a href="#时间复杂度-2" aria-hidden="true" class="header-anchor">#</a> 时间复杂度</h4> <p>O(n + k), k 是数据的范围</p> <h4 id="是稳定排序-2"><a href="#是稳定排序-2" aria-hidden="true" class="header-anchor">#</a> 是稳定排序</h4> <p>取决于往临时数组 tmp 中添加数据的先后，上面代码中从原数组后面往前遍历，这时原数组中相同大小的元素靠后的放在临时数组 tmp 靠后的位置，这样就保证了计数排序是稳定的排序。如果此时是从前往后遍历就不是稳定的排序了，正好与原数组中的顺序相反</p> <h4 id="不是原地排序-2"><a href="#不是原地排序-2" aria-hidden="true" class="header-anchor">#</a> 不是原地排序</h4> <p>需要用额外的空间来作为桶，因此不是原地排序，空间复杂度是 O(n + k), k 是数据的范围</p> <h3 id="基数排序"><a href="#基数排序" aria-hidden="true" class="header-anchor">#</a> 基数排序</h3> <h4 id="算法原理（以排序10万个手机号为例来说明）"><a href="#算法原理（以排序10万个手机号为例来说明）" aria-hidden="true" class="header-anchor">#</a> 算法原理（以排序10万个手机号为例来说明）</h4> <ol><li>比较两个手机号码a，b的大小，如果在前面几位中a已经比b大了，那后面几位就不用看了。</li> <li>借助稳定排序算法的思想，可以先按照最后一位来排序手机号码，然后再按照倒数第二位来重新排序，以此类推，最后按照第一个位重新排序。</li> <li>经过11次排序后，手机号码就变为有序的了。</li> <li>每次排序有序数据范围较小，可以使用桶排序或计数排序来完成。</li></ol> <h4 id="使用条件-3"><a href="#使用条件-3" aria-hidden="true" class="header-anchor">#</a> 使用条件</h4> <ol><li>要求数据可以分割独立的“位”来比较；</li> <li>位之间由递进关系，如果a数据的高位比b数据大，那么剩下的地位就不用比较了；</li> <li>每一位的数据范围不能太大，要可以用线性排序，否则基数排序的时间复杂度无法做到O(n)。</li></ol> <h4 id="时间复杂度-3"><a href="#时间复杂度-3" aria-hidden="true" class="header-anchor">#</a> 时间复杂度</h4> <p>O(n * k), k 是数据的维度（比如上面的例子中就是手机号的位数 11）</p> <h4 id="是稳定排序-3"><a href="#是稳定排序-3" aria-hidden="true" class="header-anchor">#</a> 是稳定排序</h4> <p>是稳定排序，如果不是稳定排序就实现不了多维度的排序</p> <h4 id="不是原地排序-3"><a href="#不是原地排序-3" aria-hidden="true" class="header-anchor">#</a> 不是原地排序</h4> <p>需要用额外的空间来作为桶，因此不是原地排序，空间复杂度是 O(n + k), k 是数据的维度</p> <h3 id="qa-对于一组包含大小写的字符进行排序，使小写的排在大写的前面。若字符中不仅有大小写还有数字的话就将数字放中间"><a href="#qa-对于一组包含大小写的字符进行排序，使小写的排在大写的前面。若字符中不仅有大小写还有数字的话就将数字放中间" aria-hidden="true" class="header-anchor">#</a> QA 对于一组包含大小写的字符进行排序，使小写的排在大写的前面。若字符中不仅有大小写还有数字的话就将数字放中间</h3> <p>用两个指针a、b：a指针从头开始往后遍历，遇到大写字母就停下，b从后往前遍历，遇到小写字母就停下，交换a、b指针对应的元素；重复如上过程，直到a、b指针相交。</p> <p>对于小写字母放前面，数字放中间，大写字母放后面，可以先将数据分为小写字母和非小写字母两大类，进行如上交换后再在非小写字母区间内分为数字和大写字母做同样处理</p> <h2 id="_14-排序优化"><a href="#_14-排序优化" aria-hidden="true" class="header-anchor">#</a> 14 排序优化</h2> <h3 id="排序算法选择"><a href="#排序算法选择" aria-hidden="true" class="header-anchor">#</a> 排序算法选择</h3> <ul><li>虽然线性排序算法的时间复杂度比较低，但是适用场景比较特殊。所以对于通用排序函数不能选择线性排序</li> <li>小规模数据排序，可以选择复杂度是 O(n^2) 的排序算法</li> <li>大规模数据，O(nlogn) 的排序算法更为合适</li> <li>归并排序由于空间复杂度是 O(n) 因此使用很少</li></ul> <h3 id="快排优化"><a href="#快排优化" aria-hidden="true" class="header-anchor">#</a> 快排优化</h3> <p>快排最坏情况复杂度是 O(n^2), 出现这样情况的原因是当数据本来有序或者接近有序的时候，如果每次分区都选择最后位置的数据作为枢轴，这种情况下时间复杂度就会退化为 O(n^2)。
+因此对于<strong>快排的优化主要在于合理选择分区点。最理想的情况是被分区点分开的两个分区中，数据的数量差不多。</strong></p> <h4 id="三数取中"><a href="#三数取中" aria-hidden="true" class="header-anchor">#</a> 三数取中</h4> <p>每次取枢轴值都在区间的头尾中间分别取值，以这三个数中间的值作为枢轴点</p> <h4 id="随机"><a href="#随机" aria-hidden="true" class="header-anchor">#</a> 随机</h4> <p>顾名思义，随机从区间中取枢轴点</p> <h4 id="解决递归时的栈溢出"><a href="#解决递归时的栈溢出" aria-hidden="true" class="header-anchor">#</a> 解决递归时的栈溢出</h4> <ol><li>限制递归深度。一旦递归过深，超过了我们事先设定的阈值，就停止递归</li> <li>是通过在堆上模拟实现一个函数调用栈，手动模拟递归压栈、出栈的过程</li></ol> <h3 id="通用排序函数实现技巧"><a href="#通用排序函数实现技巧" aria-hidden="true" class="header-anchor">#</a> 通用排序函数实现技巧</h3> <ol><li>数据量不大时，可以采取用时间换空间的思路</li> <li>数据量大时，优化快排分区点的选择</li> <li>防止堆栈溢出，可以选择在堆上手动模拟调用栈解决</li> <li>在排序区间中，当元素个数小于某个常数是，可以考虑使用 O(n^2) 级别的插入排序</li> <li>用哨兵简化代码，每次排序都减少一次判断，尽可能把性能优化到极致</li></ol></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">7/25/2019, 10:30:07 AM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.a54d2909.js" defer></script><script src="/blog/assets/js/2.fd76eafa.js" defer></script><script src="/blog/assets/js/69.f6f5adc6.js" defer></script>
+  </body>
+</html>
